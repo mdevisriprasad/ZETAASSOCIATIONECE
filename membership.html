@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZETA ORGANIZATION</title>
+
+ <link rel="icon" type="image/png" href="ZETA_LOGO.png">
+ 
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:20px;
+
+overflow-x:hidden;
+
+background:#050816;
+
+color:white;
+
+position:relative;
+
+}
+
+/* PCB Circuit Background */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background-image:
+
+    linear-gradient(
+    90deg,
+    rgba(0,255,255,0.15) 2px,
+    transparent 2px
+    ),
+
+    linear-gradient(
+    rgba(0,255,255,0.15) 2px,
+    transparent 2px
+    );
+
+    background-size:120px 120px;
+
+    animation:circuitMove 20s linear infinite;
+
+    z-index:-3;
+}
+
+@keyframes circuitMove{
+
+0%{
+background-position:0 0;
+}
+
+100%{
+background-position:120px 120px;
+}
+
+}
+/* Glass Card */
+
+.container{
+
+width:550px;
+max-width:95%;
+
+margin:40px auto;
+
+position:relative;
+
+z-index:10;
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(25px);
+
+border:1px solid rgba(0,255,255,0.4);
+
+border-radius:25px;
+
+padding:40px;
+
+box-shadow:
+0 0 20px rgba(0,255,255,0.4),
+0 0 80px rgba(0,255,255,0.2);
+
+}
+.logo{
+
+text-align:center;
+
+}
+
+.logo img{
+
+width:90px;
+
+margin-bottom:10px;
+
+}
+
+.logo h1{
+
+color:#FFD700;
+
+}
+
+.logo p{
+
+color:white;
+
+margin-bottom:25px;
+
+}
+
+/* Form */
+
+.input-box{
+
+margin-bottom:18px;
+
+}
+
+.input-box label{
+
+display:block;
+
+margin-bottom:5px;
+
+color:white;
+
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+outline:none;
+
+border-radius:10px;
+
+background:#000;
+
+color:white;
+
+font-size:15px;
+
+margin-top:5px;
+
+}
+
+/* Neon Circuit Button */
+
+.btn{
+
+width:100%;
+
+padding:16px;
+
+margin-top:15px;
+
+border:none;
+
+border-radius:12px;
+
+background:#00cfff;
+
+color:#081b29;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+
+display:block;
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 0 15px #00ffff,
+0 0 40px #00ffff,
+0 0 80px #00ffff;
+
+}
+
+.admin-btn{
+
+display:block;
+
+width:100%;
+
+margin-top:15px;
+
+padding:16px;
+
+background:#FFD700;
+
+color:#001f3f;
+
+text-decoration:none;
+
+text-align:center;
+
+font-size:18px;
+
+font-weight:bold;
+
+border-radius:12px;
+
+transition:0.3s;
+
+}
+
+.admin-btn:hover{
+
+background:white;
+
+box-shadow:
+0 0 15px #FFD700,
+0 0 40px #FFD700;
+
+}
+.admin-btn:hover{
+
+background:white;
+
+box-shadow:
+0 0 15px #FFD700,
+0 0 40px #FFD700;
+
+}
+
+.btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 0 15px #00ffff,
+0 0 40px #00ffff,
+0 0 80px #00ffff;
+
+}
+
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.8),
+transparent
+);
+
+transition:0.8s;
+
+}
+
+.btn:hover::before{
+
+left:100%;
+
+}
+
+/* Circuit Lines */
+
+.circuit{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+top:0;
+left:0;
+
+pointer-events:none;
+
+}
+
+.line{
+
+position:absolute;
+
+background:#00ffff;
+
+animation:pulse 2s infinite;
+
+}
+
+.line1{
+width:2px;
+height:100px;
+top:20px;
+left:30px;
+}
+
+.line2{
+width:100px;
+height:2px;
+bottom:40px;
+right:50px;
+}
+
+.line3{
+width:2px;
+height:80px;
+bottom:80px;
+right:120px;
+}
+
+@keyframes pulse{
+
+0%,100%{
+opacity:0.3;
+}
+
+50%{
+opacity:1;
+box-shadow:0 0 20px #00ffff;
+}
+
+}
+
+.circuit-bg{
+
+position:fixed;
+inset:0;
+
+pointer-events:none;
+
+z-index:-1;
+}
+
+.trace{
+
+position:absolute;
+
+background:#00ffff;
+
+box-shadow:
+0 0 15px #00ffff;
+
+}
+
+.t1{
+
+width:2px;
+height:300px;
+
+left:20%;
+
+animation:flow1 4s infinite;
+}
+
+.t2{
+
+width:300px;
+height:2px;
+
+top:30%;
+
+animation:flow2 5s infinite;
+}
+
+.t3{
+
+width:2px;
+height:350px;
+
+right:25%;
+
+animation:flow1 6s infinite;
+}
+
+.t4{
+
+width:350px;
+height:2px;
+
+bottom:25%;
+
+animation:flow2 4s infinite;
+}
+
+@keyframes flow1{
+
+0%{
+opacity:0.2;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0.2;
+}
+
+}
+
+@keyframes flow2{
+
+0%{
+transform:translateX(-50px);
+}
+
+50%{
+transform:translateX(50px);
+}
+
+100%{
+transform:translateX(-50px);
+}
+
+}
+
+.chip{
+
+position:fixed;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:180px;
+height:180px;
+
+border:3px solid #00ffff;
+
+border-radius:12px;
+
+background:
+rgba(0,255,255,0.05);
+
+box-shadow:
+0 0 20px #00ffff,
+0 0 60px #00ffff;
+
+animation:pulseChip 3s infinite;
+
+z-index:-2;
+}
+
+@keyframes pulseChip{
+
+0%,100%{
+
+box-shadow:
+0 0 20px #00ffff,
+0 0 60px #00ffff;
+
+}
+
+50%{
+
+box-shadow:
+0 0 40px #00ffff,
+0 0 120px #00ffff;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="chip"></div>
+
+<div class="circuit-bg">
+<div class="trace t1"></div>
+<div class="trace t2"></div>
+<div class="trace t3"></div>
+<div class="trace t4"></div>
+</div>
+
+<div class="container">
+
+<div class="circuit">
+
+<div class="line line1"></div>
+<div class="line line2"></div>
+<div class="line line3"></div>
+
+</div>
+
+<div class="logo">
+
+<img src="ZETA_LOGO.png" alt="ZETA Logo">
+
+<h1>ZETA Membership Registration</h1>
+
+<p>
+Join the Official Student Technical Organization
+</p>
+
+</div>
+
+<form id="membershipForm">
+
+<div class="input-box">
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="fullName"
+placeholder="Enter Full Name"
+required>
+
+</div>
+
+<div class="input-box">
+
+<label>Roll Number</label>
+
+<input
+type="text"
+id="rollNumber"
+placeholder="Enter Roll Number"
+required>
+
+</div>
+
+<div class="input-box">
+
+<label>Branch</label>
+
+<input
+type="text"
+id="branch"
+placeholder="ECE"
+required>
+
+</div>
+
+<div class="input-box">
+
+<label>Year</label>
+
+<select id="year" required>
+
+<option>1st Year</option>
+<option>2nd Year</option>
+<option>3rd Year</option>
+<option>4th Year</option>
+
+</select>
+
+</div>
+
+<div class="input-box">
+
+<label>Position Applying For</label>
+
+<select id="position" required>
+
+<option value="">Select Position</option>
+<option>President</option>
+<option>Vice President</option>
+<option>Secretary</option>
+<option>Vice Secretary</option>
+<option>Treasurer</option>
+<option>Technical Lead</option>
+<option>Event Coordinator</option>
+<option>Media Coordinator</option>
+
+</select>
+
+</div>
+
+<button class="btn" type="submit">
+Submit Application
+</button>
+
+<br><br>
+
+<a href="admin/admin register.html" class="admin-btn">
+Admin Registration
+</a>
+
+</form>
+
+</div>
+
+<script>
+
+const form = document.getElementById("membershipForm");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+const name =
+document.getElementById("fullName").value;
+
+const position =
+document.getElementById("position").value;
+
+localStorage.setItem("memberName", name);
+localStorage.setItem("memberPosition", position);
+
+alert("Application Submitted Successfully!");
+
+window.location.href = "index.html";
+
+});
+
+</script>
+
+</body>
+</html>

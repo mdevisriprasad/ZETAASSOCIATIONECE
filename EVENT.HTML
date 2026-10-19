@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZETA ORGANIZATION</title>
+
+ <link rel="icon" type="image/png" href="ZETA_LOGO.png">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#081b29;
+    color:white;
+}
+
+header{
+    background:#001f3f;
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+}
+
+.logo h2{
+    color:#FFD700;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    color:#FFD700;
+    font-size:50px;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+.events{
+    padding:50px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#0f2f52;
+    border-radius:15px;
+    padding:25px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h2{
+    color:#FFD700;
+    margin-bottom:10px;
+}
+
+.card p{
+    margin:10px 0;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:#FFD700;
+    color:black;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:white;
+}
+
+.registration{
+    padding:70px 10%;
+    text-align:center;
+}
+
+.registration h2{
+    color:#FFD700;
+    margin-bottom:20px;
+}
+
+.registration form{
+    max-width:600px;
+    margin:auto;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    background:#FFD700;
+    border:none;
+    padding:15px 30px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.nav-btn{
+    display:inline-block;
+    margin-top:25px;
+    margin-right:10px;
+    padding:15px 30px;
+    background:#FFD700;
+    color:#001f3f;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    background:white;
+}
+
+footer{
+    background:#001f3f;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:35px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+<img src="ZETA_LOGO.png" alt="ZETA Logo">
+
+<div>
+<h2>ZETA ORGANIZATION</h2>
+<p>Zone for Electronics Technologies and Automation</p>
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>Events & Workshops</h1>
+
+<p>
+Explore technical workshops, competitions,
+innovation challenges and professional development programs.
+</p>
+
+</section>
+
+<section class="events">
+
+<div class="card">
+
+<h2>Embedded Systems Workshop</h2>
+
+<p><b>Date:</b> 15 July 2026</p>
+
+<p>
+Hands-on workshop on Arduino,
+Microcontrollers and Embedded Systems.
+</p>
+
+<a href="#register" class="btn">
+Register Now
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>IoT Innovation Challenge</h2>
+
+<p><b>Date:</b> 25 July 2026</p>
+
+<p>
+Build innovative Internet of Things projects
+and compete with fellow students.
+</p>
+
+<a href="#register" class="btn">
+Register Now
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>PCB Design Workshop</h2>
+
+<p><b>Date:</b> 10 August 2026</p>
+
+<p>
+Learn PCB Designing using Sprint Layout,
+KiCad and industry practices.
+</p>
+
+<a href="#register" class="btn">
+Register Now
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Technical Quiz Competition</h2>
+
+<p><b>Date:</b> 20 August 2026</p>
+
+<p>
+Test your knowledge in Electronics,
+Communication and Automation.
+</p>
+
+<a href="#register" class="btn">
+Register Now
+</a>
+
+</div>
+
+</section>
+
+<section class="registration" id="register">
+
+<h2>Event Registration</h2>
+
+<form>
+
+<input type="text"
+placeholder="Full Name"
+required>
+
+<input type="text"
+placeholder="Roll Number"
+required>
+
+<input type="email"
+placeholder="Email Address">
+
+<select required>
+
+<option>
+Select Event
+</option>
+
+<option>
+Embedded Systems Workshop
+</option>
+
+<option>
+IoT Innovation Challenge
+</option>
+
+<option>
+PCB Design Workshop
+</option>
+
+<option>
+Technical Quiz Competition
+</option>
+
+</select>
+
+<textarea
+rows="5"
+placeholder="Additional Information">
+</textarea>
+
+<button type="submit">
+Submit Registration
+</button>
+<a href="index.html" class="nav-btn">
+← Back to Home
+</a>
+</form>
+
+</section>
+
+<footer>
+
+<h3>ZETA ORGANIZATION</h3>
+
+<p>
+Zone for Electronics Technologies and Automation
+</p>
+
+<p>
+BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY
+</p>
+
+<p>
+Department of Electronics & Communication Engineering
+</p>
+
+</footer>
+
+</body>
+</html>

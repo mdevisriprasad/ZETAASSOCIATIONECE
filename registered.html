@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<title>ZETA ASSOCIATION</title>
+
+<link rel="icon" type="image/png" href="ZETA_LOGO.png">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#050816;
+color:white;
+min-height:100vh;
+}
+
+/* Header */
+
+/* ================= HEADER ================= */
+
+.header{
+    background:#17365f;
+    width:100%;
+    padding:15px 40px;
+    box-sizing:border-box;
+}
+
+.header-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    
+}
+
+/* Logo */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px !important;
+    height:60px !important;
+    border-radius:50%;
+}
+
+.logo-text h1{
+    color:#ffd400;
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.logo-text p{
+    color:#fff;
+    margin-top:4px;
+    font-size:14px;
+}
+
+/* Navigation */
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:15px;
+    margin:50;
+    padding:0;
+}
+
+.navbar ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:15px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+    color:#ffd400;
+}
+
+.menu-toggle{
+    display:none;
+}
+
+/* Hamburger */
+
+.menu-btn{
+
+    display:none;
+
+    font-size:28px;
+
+    color:white;
+
+    cursor:pointer;
+
+    margin-left:25px;
+
+}
+
+/* Mobile Menu */
+
+/* ================= MOBILE MENU ================= */
+
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:#FFD700;
+    cursor:pointer;
+}
+
+#mobileMenu{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:90px;
+    left:0;
+    width:100%;
+    background:#0b2b52;
+    box-shadow:0 10px 20px rgba(0,0,0,.4);
+    z-index:9999;
+}
+
+#mobileMenu.active{
+    display:flex;
+}
+
+#mobileMenu a{
+    color:#fff;
+    text-decoration:none;
+    padding:16px 20px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+#mobileMenu a:hover{
+    background:#FFD700;
+    color:#081b29;
+}
+/* Mobile */
+
+@media screen and (max-width:768px){
+
+.header{
+    padding:12px 15px;
+    justify-content:space-between;
+}
+
+.logo-section{
+    gap:10px;
+}
+
+.logo-section img{
+    width:45px;
+    height:45px;
+}
+
+.logo-text h1{
+    font-size:18px;
+}
+
+.logo-text p{
+    font-size:11px;
+}
+
+nav{
+    display:none;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+section{
+    width:95%;
+    margin:30px auto;
+}
+
+section h2{
+    font-size:28px;
+}
+
+section p{
+    font-size:16px;
+}
+
+.card{
+    padding:18px;
+}
+
+}
+
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+}
+
+.logo h2{
+    color:#FFD700;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    color:#FFD700;
+    font-size:50px;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+
+/* Card */
+
+.card{
+background:rgb(0, 0, 0);
+border:1px solid rgb(0, 0, 0);
+border-radius:15px;
+padding:25px;
+box-shadow:0 0 20px rgba(255, 255, 255, 0.904);
+}
+
+/* Statistics */
+
+.stats{
+display:flex;
+gap:20px;
+margin-bottom:25px;
+flex-wrap:wrap;
+}
+
+.stat-box{
+background:#000000;
+padding:20px;
+border-radius:12px;
+flex:1;
+min-width:200px;
+text-align:center;
+border:1px solid #000000;
+box-shadow:0 0 19px rgb(255, 255, 255);
+}
+
+.stat-box h2{
+color:#FFD700;
+}
+
+.stat-box p{
+margin-top:10px;
+}
+
+/* Search */
+
+.search-box{
+margin-bottom:20px;
+}
+
+.search-box input{
+width:100%;
+padding:12px;
+border:none;
+outline:none;
+border-radius:8px;
+background:rgba(250, 250, 250, 0.925);
+color:white;
+}
+
+/* Table */
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#FFD700;
+color:#001f3f;
+padding:15px;
+}
+
+td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+tr:hover{
+background:rgba(0,255,255,0.05);
+}
+
+/* Buttons */
+
+.btn{
+padding:8px 15px;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+margin:2px;
+}
+
+.edit{
+background:#00ff3779;
+color:#001f3f;
+}
+
+.delete{
+background:#ff4d4d;
+color:white;
+}
+
+.edit:hover{
+box-shadow:0 0 10px #00ff4c7c;
+}
+
+.delete:hover{
+box-shadow:0 0 10px #ff4d4d;
+}
+
+/* Navigation */
+
+.bottom-buttons{
+margin-top:25px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.nav-btn{
+text-decoration:none;
+background:#FFD700;
+color:#001f3f;
+padding:12px 20px;
+border-radius:10px;
+font-weight:bold;
+}
+
+.nav-btn:hover{
+background:white;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+table{
+font-size:12px;
+}
+
+th,td{
+padding:8px;
+}
+
+}
+
+footer{
+    background:#001f3f;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:35px;
+}
+
+}
+
+.announcement-bar{
+    display:flex;
+    align-items:center;
+    background:#1c0640;
+    border-top:2px solid #061385;
+    border-bottom:2px solid #061385;
+    overflow:hidden;
+}
+
+.announcement-title{
+    background:#063777;
+    color:#ffffff;
+    padding:14px 22px;
+    font-size:18px;
+    font-weight:bold;
+    z-index:2;
+}
+
+.announcement-wrapper{
+    flex:1;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.announcement-text{
+    display:inline-block;
+    padding-left:100%;
+    animation:scrollText 60s linear infinite;
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+}
+
+@keyframes scrollText{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-100%);
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+<header class="header">
+    <div class="header-container">
+
+        <div class="logo">
+            <img src="ZETA_LOGO.png" alt="ZETA Logo">
+            <div class="logo-text">
+                <h1>ZETA ASSOCIATION</h1>
+                <p>Zone for Electronics Technologies and Automation</p>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ABOUT.HTML">About</a></li>
+                <li><a href="VISION & MISSION.HTML">Vision & Mission</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="EVENT.HTML">Event</a></li>
+                <li><a href="registered.html">Registered Members</a></li>
+                <li><a href="GALLERY.HTML">Gallery</a></li>
+                <li><a href="Resources.html">Resources</a></li>
+                <li><a href="CONTACT.HTML">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+    ☰
+</div>
+
+<div id="mobileMenu" class="mobile-menu">
+
+<a href="index.html">Home</a>
+
+<a href="ABOUT.HTML">About</a>
+
+<a href="VISION & MISSION.HTML">Vision & Mission</a>
+
+<a href="team.html">Team</a>
+
+<a href="EVENT.HTML">Event</a>
+
+<a href="registered.html">Registered Members</a>
+
+<a href="GALLERY.HTML">Gallery</a>
+
+<a href="Resources.html">Resources</a>
+
+<a href="CONTACT.HTML">Contact</a>
+
+</div>
+
+</header>
+
+<div class="announcement-bar">
+
+    <div class="announcement-title">
+        📢 Announcements :
+    </div>
+
+    <div class="announcement-wrapper">
+
+        <div class="announcement-text">
+
+            🎉 PCB Design Workshop Registration is Open |
+            📅 Workshop Date : 03 August 2026 |
+            🏆 Welcome to ZETA Association |
+            📢 Stay updated with the latest events and workshops.
+
+        </div>
+
+    </div>
+
+</div>
+
+<section>
+
+<div class="hero">
+
+<h1>REGISTERED MEMBERS</h1>
+
+<p>Registered Members Data</p>
+
+</div>
+
+<div class="container">
+
+<div class="stats">
+
+<div class="stat-box">
+<h2 id="totalMembers">0</h2>
+<p>Total Members</p>
+</div>
+
+<div class="stat-box">
+<h2 id="Registered Members">0</h2>
+<p>Registered Members</p>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2 style="color:#FFD700;margin-bottom:20px;">
+Approved Members List
+</h2>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Member Name">
+
+</div>
+
+<table id="memberTable">
+
+<tr>
+<th>Name</th>
+<th>Roll Number</th>
+<th>Branch</th>
+<th>Year</th>
+<th>Payment Status</th>
+<th>Payment Screenshot</th>
+<th>Payment Transaction ID</th>
+</tr>
+
+</table>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function toggleMenu(){
+
+document.getElementById("mobileMenu").classList.toggle("active");
+
+}
+
+</script>
+
+<footer>
+
+<p><strong>ZETA ASSOCIATION</strong></p>
+
+<p>
+Zone for Electronics Technologies and Automation
+</p>
+
+<p>
+BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY
+</p>
+
+<p>
+Department of Electronics and Communication Engineering
+</p>
+
+<p>© 2025 ZETA ASSOCIATION</p>
+
+</footer>
+
+
+</body>
+</html>

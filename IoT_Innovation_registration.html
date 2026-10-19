@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<title>IoT Innovation Workshop Registration | ZETA Association</title>
+
+<link rel="icon" type="image/png" href="ZETA_LOGO.png">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#081b29,#0f3057,#1a1a40);
+    color:white;
+    min-height:100vh;
+}
+
+/* Header */
+
+/* ================= HEADER ================= */
+
+.header{
+    background:#17365f;
+    width:100%;
+    padding:15px 40px;
+    box-sizing:border-box;
+}
+
+.header-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    
+}
+
+/* Logo */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px !important;
+    height:60px !important;
+    border-radius:50%;
+}
+
+.logo-text h1{
+    color:#ffd400;
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.logo-text p{
+    color:#fff;
+    margin-top:4px;
+    font-size:14px;
+}
+
+/* Navigation */
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:15px;
+    margin:25;
+    padding:0;
+}
+
+.navbar ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:15px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+    color:#ffd400;
+}
+
+.menu-toggle{
+    display:none;
+}
+
+/* Hamburger */
+
+.menu-btn{
+
+    display:none;
+
+    font-size:28px;
+
+    color:white;
+
+    cursor:pointer;
+
+    margin-left:25px;
+
+}
+
+/* Mobile Menu */
+
+/* ================= MOBILE MENU ================= */
+
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:#FFD700;
+    cursor:pointer;
+}
+
+#mobileMenu{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:90px;
+    left:0;
+    width:100%;
+    background:#0b2b52;
+    box-shadow:0 10px 20px rgba(0,0,0,.4);
+    z-index:9999;
+}
+
+#mobileMenu.active{
+    display:flex;
+}
+
+#mobileMenu a{
+    color:#fff;
+    text-decoration:none;
+    padding:16px 20px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+#mobileMenu a:hover{
+    background:#FFD700;
+    color:#081b29;
+}
+/* Mobile */
+
+@media screen and (max-width:768px){
+
+.header{
+    padding:12px 15px;
+    justify-content:space-between;
+}
+
+.logo-section{
+    gap:10px;
+}
+
+.logo-section img{
+    width:45px;
+    height:45px;
+}
+
+.logo-text h1{
+    font-size:18px;
+}
+
+.logo-text p{
+    font-size:11px;
+}
+
+nav{
+    display:none;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+section{
+    width:95%;
+    margin:30px auto;
+}
+
+section h2{
+    font-size:28px;
+}
+
+section p{
+    font-size:16px;
+}
+
+.card{
+    padding:18px;
+}
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:70px;
+
+    height:70px;
+
+}
+
+.logo-text h2{
+
+    color:#FFD700;
+
+    font-size:28px;
+
+}
+
+.logo-text p{
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+/* Registration Section */
+
+.registration{
+
+    width:90%;
+
+    max-width:750px;
+
+    margin:40px auto;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 0 25px rgba(0,255,255,.3);
+
+}
+
+.registration h2{
+
+    text-align:center;
+
+    color:#FFD700;
+
+    margin-bottom:25px;
+
+}
+
+.workshop-info{
+
+    background:#10395f;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin-bottom:25px;
+
+    line-height:2;
+
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:12px 0;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:16px;
+
+}
+
+.payment-box{
+
+    background:white;
+
+    color:black;
+
+    text-align:center;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin:25px 0;
+
+}
+
+.paymentQR{
+
+    width:260px;
+
+    max-width:100%;
+
+    border-radius:10px;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    background:#FFD700;
+
+    color:#001f3f;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:white;
+
+    transform:scale(1.03);
+
+}
+
+.nav-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    text-decoration:none;
+
+    background:#FFD700;
+
+    color:#001f3f;
+
+    padding:14px 28px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+footer{
+
+    margin-top:40px;
+
+    background:#001f3f;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.logo{
+
+flex-direction:column;
+
+}
+
+.registration{
+
+width:95%;
+
+padding:20px;
+
+}
+
+.paymentQR{
+
+width:220px;
+
+}
+
+.workshop-info{
+
+background:#123456;
+padding:20px;
+border-radius:15px;
+margin-bottom:25px;
+text-align:center;
+
+}
+
+.payment-box{
+
+background:#ffffff;
+color:#000;
+padding:20px;
+border-radius:20px;
+text-align:center;
+margin:25px 0;
+
+}
+
+.paymentQR{
+
+width:280px;
+max-width:100%;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+
+}
+
+.payment-box h4{
+
+margin-top:15px;
+
+}
+
+.payment-box p{
+
+margin:8px 0;
+
+}
+
+}
+
+.announcement-bar{
+    display:flex;
+    align-items:center;
+    background:#1c0640;
+    border-top:2px solid #061385;
+    border-bottom:2px solid #061385;
+    overflow:hidden;
+}
+
+.announcement-title{
+    background:#063777;
+    color:#ffffff;
+    padding:14px 22px;
+    font-size:18px;
+    font-weight:bold;
+    z-index:2;
+}
+
+.announcement-wrapper{
+    flex:1;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.announcement-text{
+    display:inline-block;
+    padding-left:100%;
+    animation:scrollText 60s linear infinite;
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+}
+
+@keyframes scrollText{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-100%);
+    }
+
+}
+
+</style>
+
+</head>
+
+<header class="header">
+    <div class="header-container">
+
+        <div class="logo">
+            <img src="ZETA_LOGO.png" alt="ZETA Logo">
+            <div class="logo-text">
+                <h1>ZETA ASSOCIATION</h1>
+                <p>Zone for Electronics Technologies and Automation</p>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ABOUT.HTML">About</a></li>
+                <li><a href="VISION & MISSION.HTML">Vision & Mission</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="EVENT.HTML">Event</a></li>
+                <li><a href="registered.html">Registered Members</a></li>
+                <li><a href="GALLERY.HTML">Gallery</a></li>
+                <li><a href="Resources.html">Resources</a></li>
+                <li><a href="CONTACT.HTML">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+    ☰
+</div>
+
+<div id="mobileMenu" class="mobile-menu">
+
+<a href="index.html">Home</a>
+
+<a href="ABOUT.HTML">About</a>
+
+<a href="VISION & MISSION.HTML">Vision & Mission</a>
+
+<a href="team.html">Team</a>
+
+<a href="EVENT.HTML">Event</a>
+
+<a href="registered.html">Registered Members</a>
+
+<a href="GALLERY.HTML">Gallery</a>
+
+<a href="Resources.html">Resources</a>
+
+<a href="CONTACT.HTML">Contact</a>
+
+</div>
+
+</header>
+
+<div class="announcement-bar">
+
+    <div class="announcement-title">
+        📢 Announcements :
+    </div>
+
+    <div class="announcement-wrapper">
+
+        <div class="announcement-text">
+
+            🎉 PCB Design Workshop Registration is Open |
+            📅 Workshop Date : 03 August 2026 |
+            🏆 Welcome to ZETA Association |
+            📢 Stay updated with the latest events and workshops.
+
+        </div>
+
+    </div>
+
+</div>
+
+<section class="registration" id="register">
+
+<h2>IoT Innovation Challenge Registration</h2>
+
+<div class="workshop-info">
+
+<h3>IoT Innovation Challenge</h3>
+
+<p><strong>Date :</strong> Announced Soon</p>
+
+<p><strong>Time :</strong> Announced Soon</p>
+
+<p><strong>Venue :</strong> BEHARA ENGINEERING AUDITORIUM </p>
+
+<p><strong>Registration Fee :</strong> Announced Soon</p>
+
+</div>
+
+<form id="registrationForm">
+
+<input type="text"
+id="name"
+placeholder="Full Name"
+required>
+
+<input type="text"
+id="roll"
+placeholder="Roll Number"
+required>
+
+<input type="email"
+id="email"
+placeholder="Email Address"
+required>
+
+<input type="tel"
+id="mobile"
+placeholder="Mobile Number"
+required>
+
+<select id="branch" required>
+
+<option value="">Select Branch</option>
+
+<option>CSE</option>
+
+<option>ECE</option>
+
+<option>EEE</option>
+
+<option>MECH</option>
+
+<option>CSD</option>
+
+</select>
+
+<select id="year" required>
+
+<option value="">Select Year</option>
+
+<option>1st Year</option>
+
+<option>2nd Year</option>
+
+<option>3rd Year</option>
+
+<option>4th Year</option>
+
+</select>
+
+<hr>
+
+<h3>Workshop Registration Payment</h3>
+
+<div class="payment-box">
+
+<img src="qr-placeholder.jpg"
+class="paymentQR"
+alt="IoT Innovation Challenge Payment QR">
+
+<h4>Scan QR Code using any UPI App</h4>
+
+<p><b>UPI ID :</b> @ybl</p>
+
+<p><b>Account :</b> </p>
+
+<p style="color:#FFD700;">
+Registration Fee : Announced Soon
+</p>
+
+</div>
+
+<div class="payment-instructions">
+
+<h3>Payment Instructions</h3>
+
+<p style="color:#00ffcc;">
+✔ Complete the payment using the QR code above.
+</p>
+
+<p style="color:#00ffcc;">
+✔ After payment is completed, upload your payment screenshot.
+</p>
+
+<p style="color:#00ffcc;">
+✔ Enter your UPI Transaction ID correctly.
+</p>
+
+</div>
+
+<!-- Upload Payment Screenshot -->
+
+<label><strong>Upload Payment Screenshot</strong></label>
+
+<input
+type="file"
+id="paymentScreenshot"
+accept="image/png,image/jpeg,image/jpg"
+required>
+
+<!-- Transaction ID -->
+
+<label><strong>UPI Transaction ID</strong></label>
+
+<input
+type="text"
+id="transaction"
+placeholder="Enter UPI Transaction ID"
+required>
+
+<!-- Remarks -->
+
+<label><strong>Remarks (Optional)</strong></label>
+
+<textarea
+id="remarks"
+rows="4"
+placeholder="Write your remarks here...">
+</textarea>
+
+<button type="submit">
+
+Register Now
+
+</button>
+
+</form>
+
+<div id="success"></div>
+
+</section>
+
+
+
+<script>
+function toggleMenu(){
+
+document.getElementById("mobileMenu").classList.toggle("active");
+
+}
+</script>  
+
+<body>
+
+<footer>
+
+<p><strong>ZETA ASSOCIATION</strong></p>
+
+<p>
+Zone for Electronics Technologies and Automation
+</p>
+
+<p>
+BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY
+</p>
+
+<p>
+Department of Electronics and Communication Engineering
+</p>
+
+<p>© 2025 ZETA ASSOCIATION</p>
+
+</footer>
+
+</body>
+</html>

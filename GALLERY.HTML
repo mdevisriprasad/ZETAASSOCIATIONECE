@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<title>ZETA ORGANIZATION</title>
+<title>ZETA ASSOCIATION</title>
 
  <link rel="icon" type="image/png" href="ZETA_LOGO.png">
 
@@ -23,12 +25,180 @@ body{
     color:white;
 }
 
-header{
-    background:#001f3f;
-    padding:15px 5%;
+.header{
+    background:#17365f;
+    width:100%;
+    padding:15px 40px;
+    box-sizing:border-box;
+}
+
+.header-container{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    
+}
+
+/* Logo */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px !important;
+    height:60px !important;
+    border-radius:50%;
+}
+
+.logo-text h1{
+    color:#ffd400;
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.logo-text p{
+    color:#fff;
+    margin-top:4px;
+    font-size:14px;
+}
+
+/* Navigation */
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:15px;
+    margin:25;
+    padding:0;
+}
+
+.navbar ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:15px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+    color:#ffd400;
+}
+
+.menu-toggle{
+    display:none;
+}
+
+/* Hamburger */
+
+.menu-btn{
+
+    display:none;
+
+    font-size:28px;
+
+    color:white;
+
+    cursor:pointer;
+
+    margin-left:25px;
+
+}
+
+/* Mobile Menu */
+
+/* ================= MOBILE MENU ================= */
+
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:#FFD700;
+    cursor:pointer;
+}
+
+#mobileMenu{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:90px;
+    left:0;
+    width:100%;
+    background:#0b2b52;
+    box-shadow:0 10px 20px rgba(0,0,0,.4);
+    z-index:9999;
+}
+
+#mobileMenu.active{
+    display:flex;
+}
+
+#mobileMenu a{
+    color:#fff;
+    text-decoration:none;
+    padding:16px 20px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+#mobileMenu a:hover{
+    background:#FFD700;
+    color:#081b29;
+}
+/* Mobile */
+
+@media screen and (max-width:768px){
+
+.header{
+    padding:12px 15px;
+    justify-content:space-between;
+}
+
+.logo-section{
+    gap:10px;
+}
+
+.logo-section img{
+    width:45px;
+    height:45px;
+}
+
+.logo-text h1{
+    font-size:18px;
+}
+
+.logo-text p{
+    font-size:11px;
+}
+
+nav{
+    display:none;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+section{
+    width:95%;
+    margin:30px auto;
+}
+
+section h2{
+    font-size:28px;
+}
+
+section p{
+    font-size:16px;
+}
+
+.card{
+    padding:18px;
+}
+
 }
 
 .logo{
@@ -67,24 +237,121 @@ header{
     margin:40px 0 20px;
 }
 
+.section-subtitle{
+    font-size:30px;
+    color:#ffffff;
+    text-align:left;
+    margin-top:10px;
+    margin-bottom:40px;
+
+    /* Move slightly left from center */
+    position:relative;
+    left:60px;
+}
+
+
+/* Gallery */
+
 .gallery{
-    padding:20px 5%;
+
+    width:90%;
+
+    margin:40px auto;
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
     gap:20px;
+
 }
 
 .gallery img{
+
     width:100%;
-    height:250px;
+
+    height:220px;
+
     object-fit:cover;
+
     border-radius:15px;
+
     cursor:pointer;
-    transition:0.4s;
+
+    transition:.4s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+
 }
 
 .gallery img:hover{
+
     transform:scale(1.05);
+
+    box-shadow:0 0 20px cyan;
+
+}
+
+/* Lightbox */
+
+.lightbox{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.92);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:15px;
+
+    box-shadow:0 0 30px rgba(255,255,255,.4);
+
+}
+
+.close-btn{
+
+    position:absolute;
+
+    top:25px;
+
+    right:40px;
+
+    font-size:55px;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+.close-btn:hover{
+
+    color:#FFD700;
+
 }
 
 .modal{
@@ -151,26 +418,218 @@ footer{
 
 }
 
+.event-card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:25px;
+    margin:30px auto;
+    width:90%;
+    box-shadow:0 0 20px rgba(0,255,255,.3);
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+video{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 0 20px cyan;
+}
+
+.media-card{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:15px;
+
+    padding:15px;
+
+    text-align:center;
+
+}
+
+.download-btn{
+
+    display:block;
+
+    margin-top:10px;
+
+    background:linear-gradient(45deg,#00e5ff,#8e2de2);
+
+    padding:10px;
+
+    color:white;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+}
+
+.download-btn:hover{
+
+    box-shadow:0 0 20px cyan;
+
+}
+
+.video-card{
+
+    width:90%;
+
+    margin:auto;
+
+}
+
+.video-card video{
+
+    width:100%;
+
+    border-radius:15px;
+
+}
+
+.announcement-bar{
+    display:flex;
+    align-items:center;
+    background:#1c0640;
+    border-top:2px solid #061385;
+    border-bottom:2px solid #061385;
+    overflow:hidden;
+}
+
+.announcement-title{
+    background:#063777;
+    color:#ffffff;
+    padding:14px 22px;
+    font-size:18px;
+    font-weight:bold;
+    z-index:2;
+}
+
+.announcement-wrapper{
+    flex:1;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.announcement-text{
+    display:inline-block;
+    padding-left:100%;
+    animation:scrollText 60s linear infinite;
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+}
+
+@keyframes scrollText{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-100%);
+    }
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<header>
+<header class="header">
+    <div class="header-container">
 
-<div class="logo">
+        <div class="logo">
+            <img src="ZETA_LOGO.png" alt="ZETA Logo">
+            <div class="logo-text">
+                <h1>ZETA ASSOCIATION</h1>
+                <p>Zone for Electronics Technologies and Automation</p>
+            </div>
+        </div>
 
-<img src="ZETA_LOGO.png" alt="ZETA Logo">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ABOUT.HTML">About</a></li>
+                <li><a href="VISION & MISSION.HTML">Vision & Mission</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="EVENT.HTML">Event</a></li>
+                <li><a href="registered.html">Registered Members</a></li>
+                <li><a href="GALLERY.HTML">Gallery</a></li>
+                <li><a href="Resources.html">Resources</a></li>
+                <li><a href="CONTACT.HTML">Contact</a></li>
+            </ul>
+        </nav>
 
-<div>
-<h2>ZETA ORGANIZATION</h2>
-<p>Zone for Electronics Technologies and Automation</p>
+    </div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+    ☰
 </div>
+
+<div id="mobileMenu" class="mobile-menu">
+
+<a href="index.html">Home</a>
+
+<a href="ABOUT.HTML">About</a>
+
+<a href="VISION & MISSION.HTML">Vision & Mission</a>
+
+<a href="team.html">Team</a>
+
+<a href="EVENT.HTML">Event</a>
+
+<a href="registered.html">Registered Members</a>
+
+<a href="GALLERY.HTML">Gallery</a>
+
+<a href="Resources.html">Resources</a>
+
+<a href="CONTACT.HTML">Contact</a>
 
 </div>
 
 </header>
+
+<div class="announcement-bar">
+
+    <div class="announcement-title">
+        📢 Announcements :
+    </div>
+
+    <div class="announcement-wrapper">
+
+        <div class="announcement-text">
+
+            🎉 PCB Design Workshop Registration is Open |
+            📅 Workshop Date : 03 August 2026 |
+            🏆 Welcome to ZETA Association |
+            📢 Stay updated with the latest events and workshops.
+
+        </div>
+
+    </div>
+
+</div>
 
 <section class="hero">
 <h1>Gallery</h1>
@@ -184,57 +643,141 @@ technical events, project expos and achievements.
 
 <section class="gallery-section">
 
-    <h2>Latest Event Photos</h2>
-
-    <div id="galleryContainer"></div>
-
-<h2 class="section-title">Workshops & Training Programs</h2>
+<h1 class="section-title">ZETA ASSOCIATION GRAND LAUNCH</h1>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" onclick="openImage(this.src)">
+    <img src="images\ZETA ASSOCIATION LAUNCH 1.jpeg" alt="Image 1" onclick="openImage(this.src)">
 
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" onclick="openImage(this.src)">
+    <img src="images\ZETA ASSOCIATION LAUNCH 3.jpeg" alt="Image 2" onclick="openImage(this.src)">
 
-<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952" onclick="openImage(this.src)">
+    <img src="images\ZETA ASSOCIATION LAUNCH .jpeg" alt="Image 3" onclick="openImage(this.src)">
 
 </div>
 
-<h2 class="section-title">Technical Events</h2>
+<section class="gallery-section">
+
+<h1 class="section-title">ECE LABORATORY</h1>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" onclick="openImage(this.src)">
+    <img src="images\lab 1.jpeg" alt="Image 1" onclick="openImage(this.src)">
 
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" onclick="openImage(this.src)">
+    <img src="images\lab 1.1.jpeg" alt="Image 2" onclick="openImage(this.src)">
 
-<img src="https://images.unsplash.com/photo-1515169067868-5387ec356754" onclick="openImage(this.src)">
+    <img src="images\lab 1.2.jpeg" alt="Image 3" onclick="openImage(this.src)">
+
+    <img src="images\lab 2.jpeg" alt="Image 3" onclick="openImage(this.src)">
+
+    <img src="images\lab 2.1.jpeg" alt="Image 3" onclick="openImage(this.src)">
+
+    <img src="images\lab 2.2.jpeg" alt="Image 3" onclick="openImage(this.src)">
+
+    <img src="images\lab 3.jpeg" alt="Image 3" onclick="openImage(this.src)">
+
+    <img src="images\lab 3.1.jpeg" alt="Image 3" onclick="openImage(this.src)">
+
+    <img src="images\lab 3.2.jpeg" alt="Image 3" onclick="openImage(this.src)">
+
+    <img src="images\lab 3.3.jpeg" alt="Image 3" onclick="openImage(this.src)">
+
+</div>
+    
+<h1 class="section-title">INDUSTRIAL VISTS</h1>
+<h2 class="section-subtitle">AMTZ INDUSTRY</h2>
+<div class="gallery">
+
+    <img src="images\amtz 1.jpeg" alt="Image 1" onclick="openImage(this.src)">
+
+    <img src="images\amtz 2.jpeg" alt="Image 2" onclick="openImage(this.src)">
+
+    <img src="images\amtz 3.jpeg" alt="Image 3" onclick="openImage(this.src)">
+
+    <img src="images\amtz 4.jpeg" alt="Image 4" onclick="openImage(this.src)">
+
+    <img src="images\amtz 5.jpeg" alt="Image 5" onclick="openImage(this.src)">
+
+    <img src="images\amtz 6.jpeg" alt="Image 6" onclick="openImage(this.src)">
 
 </div>
 
-<h2 class="section-title">Project Exhibitions</h2>
+<h1 class="section-title">WORKSHOPS & TRAINING PROGRAMS</h1>
+<h2 class="section-subtitle">PCB DESIGN WORKSHOP</h2>
+<div class="gallery">
+
+<img src="images\pcb workshop poster launch.jpeg" onclick="openImage(this.src)">
+
+<img src="images\pcb workshop poster.jpeg" onclick="openImage(this.src)">
+
+<img src="images\PCB WORKSHOP POSTER 1.jpeg" onclick="openImage(this.src)">
+
+</div>
+
+<h1 class="section-title">TECHNICAL EVENTS</h1>
+<h2 class="section-subtitle">ONE MINUTE WONDER</h2>
+<div class="gallery">
+
+ <img src="images\ONE MINUTE WONDER 1.jpeg" alt="Image 1" onclick="openImage(this.src)">
+
+ <img src="images\ONE MINUTE WONDER 2.jpeg" alt="Image 2" onclick="openImage(this.src)">
+
+ <img src="images\ONE MINUTE WONDER 3.jpeg" alt="Image 3" onclick="openImage(this.src)">
+
+ <img src="images\ONE MINUTE WONDER 4.jpeg" alt="Image 4" onclick="openImage(this.src)">
+
+</div>
+
+<h1 class="section-title">PROJECT EXHIBITIONS</h1>
+<h2 class="section-subtitle">DESIGN THINKING AND INNOVATION (DTI) </h2>
+<div class="gallery">
+
+<img src="images\dti group 1.jpeg" onclick="openImage(this.src)">
+
+<img src="images\dti 3.jpeg" onclick="openImage(this.src)">
+
+<img src="images\dti group 2.jpeg" onclick="openImage(this.src)">
+
+<img src="images\dti 2.jpeg" onclick="openImage(this.src)">
+
+<img src="images\dti group 3.jpeg" onclick="openImage(this.src)">
+
+<img src="images\dti 1.jpeg" onclick="openImage(this.src)">
+
+</div>
+
+<h1 class="section-title">ACHIEVEMENTS</h1>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475" onclick="openImage(this.src)">
+<img src="images\achivments.jpeg" onclick="openImage(this.src)">
 
-<img src="https://images.unsplash.com/photo-1581092918484-8313f3b2c7c4" onclick="openImage(this.src)">
+<img src="images\ACHIVEMENT 1.jpeg" onclick="openImage(this.src)">
 
-<img src="https://images.unsplash.com/photo-1562408590-e32931084e23" onclick="openImage(this.src)">
+<img src="images\ACHIVEMENT 2.jpeg" onclick="openImage(this.src)">
 
 </div>
 
-<h2 class="section-title">Achievements</h2>
-
+<h1 class="section-title">ACTIVITIES</h1>
+<h2 class="section-subtitle">ANTI DRUGS (EAGEL CLUB) </h2>
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1" onclick="openImage(this.src)">
+<img src="images\anti drug eagle club activity 1.jpeg" onclick="openImage(this.src)">
 
-<img src="https://images.unsplash.com/photo-1511578314322-379afb476865" onclick="openImage(this.src)">
+<img src="images\anti drug eagle club activity 2.jpeg" onclick="openImage(this.src)">
 
-<img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87" onclick="openImage(this.src)">
+<img src="images\anti drug eagle club activity 3.jpeg" onclick="openImage(this.src)">
 
 </div>
+
+<h2 class="section-subtitle"> BEACH CLEANING </h2>
+<div class="gallery">
+
+<img src="images\beach-cleaning-poster.jpeg" onclick="openImage(this.src)">
+
+<img src="images\beach-cleaning.jpeg" onclick="openImage(this.src)">
+
+</div>
+
 
 <div id="imageModal" class="modal">
 
@@ -243,12 +786,47 @@ technical events, project expos and achievements.
 <img id="modalImg">
 
 </div>
-<a href="index.html" class="nav-btn">
-← Back to Home
-</a>
+
+<!-- Lightbox -->
+
+<div id="lightbox" class="lightbox" onclick="closeImage()">
+
+    <span class="close-btn">&times;</span>
+
+    <img id="lightbox-img">
+
+</div>
+
+<script>
+function toggleMenu(){
+
+document.getElementById("mobileMenu").classList.toggle("active");
+
+}
+</script>  
+
+<script>
+
+function openImage(src){
+
+    document.getElementById("lightbox").style.display="flex";
+
+    document.getElementById("lightbox-img").src=src;
+
+}
+
+function closeImage(){
+
+    document.getElementById("lightbox").style.display="none";
+
+}
+
+</script>
+
+
 <footer>
 
-<h3>ZETA ORGANIZATION</h3>
+<p><strong>ZETA ASSOCIATION</strong></p>
 
 <p>
 Zone for Electronics Technologies and Automation
@@ -259,44 +837,12 @@ BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY
 </p>
 
 <p>
-Department of Electronics & Communication Engineering
+Department of Electronics and Communication Engineering
 </p>
 
+<p>© 2025 ZETA ASSOCIATION</p>
+
 </footer>
-
-<script>
-
-let images=
-JSON.parse(
-localStorage.getItem(
-"galleryImages"
-));
-
-let container=
-document.getElementById(
-"galleryContainer"
-);
-
-if(images){
-
-images.forEach(function(img){
-
-container.innerHTML+=`
-
-<img src="${img}"
-style="
-width:250px;
-margin:10px;
-border-radius:15px;
-">
-
-`;
-
-});
-
-}
-
-</script>
 
 </body>
 </html>

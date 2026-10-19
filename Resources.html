@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+<title>ZETA Association|Resources</title>
+ <link rel="icon" type="image/png" href="ZETA_LOGO.png">
+
+
+<style>
+
+body{
+
+background:#081b29;
+font-family:Segoe UI;
+color:white;
+margin:0;
+
+}
+
+/* Header */
+
+/* ================= HEADER ================= */
+
+.header{
+    background:#17365f;
+    width:100%;
+    padding:15px 40px;
+    box-sizing:border-box;
+}
+
+.header-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    
+}
+
+/* Logo */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px !important;
+    height:60px !important;
+    border-radius:50%;
+}
+
+.logo-text h1{
+    color:#ffd400;
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.logo-text p{
+    color:#fff;
+    margin-top:4px;
+    font-size:14px;
+}
+
+/* Navigation */
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:15px;
+    margin:25;
+    padding:0;
+}
+
+.navbar ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:15px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+    color:#ffd400;
+}
+
+.menu-toggle{
+    display:none;
+}
+
+/* Hamburger */
+
+.menu-btn{
+
+    display:none;
+
+    font-size:28px;
+
+    color:white;
+
+    cursor:pointer;
+
+    margin-left:25px;
+
+}
+
+/* Mobile Menu */
+
+/* ================= MOBILE MENU ================= */
+
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:#FFD700;
+    cursor:pointer;
+}
+
+#mobileMenu{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:90px;
+    left:0;
+    width:100%;
+    background:#0b2b52;
+    box-shadow:0 10px 20px rgba(0,0,0,.4);
+    z-index:9999;
+}
+
+#mobileMenu.active{
+    display:flex;
+}
+
+#mobileMenu a{
+    color:#fff;
+    text-decoration:none;
+    padding:16px 20px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+#mobileMenu a:hover{
+    background:#FFD700;
+    color:#081b29;
+}
+/* Mobile */
+
+@media screen and (max-width:768px){
+
+.header{
+    padding:12px 15px;
+    justify-content:space-between;
+}
+
+.logo-section{
+    gap:10px;
+}
+
+.logo-section img{
+    width:45px;
+    height:45px;
+}
+
+.logo-text h1{
+    font-size:18px;
+}
+
+.logo-text p{
+    font-size:11px;
+}
+
+nav{
+    display:none;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+section{
+    width:95%;
+    margin:30px auto;
+}
+
+section h2{
+    font-size:28px;
+}
+
+section p{
+    font-size:16px;
+}
+
+.card{
+    padding:18px;
+}
+
+}
+
+.resources-header{
+    width:90%;
+    margin:50px auto;
+    padding:10px 0;
+}
+
+.resources-header h1{
+    color:#FFD700;
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:12px;
+    text-transform:uppercase;
+}
+
+.resources-header p{
+    color:#ffffff;
+    font-size:18px;
+}
+.resources-container{
+    width:90%;
+    max-width:1400px;
+    margin:40px auto;
+}
+
+.resource-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.resource-card{
+    background:#193d6b;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.resource-card h2{
+    color:#FFD700;
+    margin-bottom:20px;
+}
+
+.resource-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#214c7a;
+    padding:14px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.resource-item a{
+    background:#FFD700;
+    color:#0b2b52;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.resource-item a:hover{
+    background:white;
+}
+
+.bottom-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-top:25px;
+}
+
+@media(max-width:900px){
+
+.resource-grid{
+grid-template-columns:1fr;
+}
+
+.bottom-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+/* Title */
+
+.title{
+
+text-align:center;
+
+margin-bottom:40px;
+
+}
+
+.title h2{
+
+font-size:42px;
+
+color:#FFD700;
+
+margin-bottom:10px;
+
+}
+
+.title p{
+
+font-size:18px;
+
+color:#ddd;
+
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;   /* Increased spacing */
+}
+
+.card{
+
+background:#0f2f52;
+
+padding:20px;
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 20px cyan;
+
+}
+
+h2{
+
+color:#FFD700;
+
+}
+
+.file{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin:15px 0;
+
+padding:12px;
+
+background:#163d63;
+
+border-radius:10px;
+
+}
+
+.file-name{
+
+font-size:15px;
+
+}
+
+.download{
+
+text-decoration:none;
+
+background:#FFD700;
+
+color:#001f3f;
+
+padding:8px 18px;
+
+border-radius:8px;
+
+font-weight:bold;
+
+}
+
+.download:hover{
+
+background:white;
+
+}
+
+.card{
+
+background:#0f2f52;
+
+padding:20px;
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px cyan;
+}
+
+.card h2{
+color:#FFD700;
+margin-bottom:15px;
+}
+
+.card ul{
+list-style:none;
+}
+
+.card li{
+margin:15px 0;
+}
+
+.card a{
+color:white;
+text-decoration:none;
+}
+
+footer{
+
+margin-top:40px;
+
+padding:20px;
+
+text-align:center;
+
+background:#001f3f;
+
+}
+
+.useful-links{
+    margin-bottom:40px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+}
+
+.logo h2{
+    color:#FFD700;
+}
+
+.announcement-bar{
+    display:flex;
+    align-items:center;
+    background:#1c0640;
+    border-top:2px solid #061385;
+    border-bottom:2px solid #061385;
+    overflow:hidden;
+}
+
+.announcement-title{
+    background:#063777;
+    color:#ffffff;
+    padding:14px 22px;
+    font-size:18px;
+    font-weight:bold;
+    z-index:2;
+}
+
+.announcement-wrapper{
+    flex:1;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.announcement-text{
+    display:inline-block;
+    padding-left:100%;
+    animation:scrollText 60s linear infinite;
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+}
+
+@keyframes scrollText{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-100%);
+    }
+
+}
+
+/* =========================================
+   RESOURCES PAGE
+   ========================================= */
+
+.resources-section {
+    width: 92%;
+    max-width: 1300px;
+    margin: 50px auto;
+}
+
+.resources-title {
+    text-align: center;
+    color: #FFD700;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.resources-subtitle {
+    text-align: center;
+    color: #cfd8e3;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   SUBJECT GRID
+   ========================================= */
+
+.subject-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* =========================================
+   SUBJECT CARD
+   ========================================= */
+
+.subject-card {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #102f50,
+            #0a2038
+        );
+
+    border: 1px solid
+        rgba(0, 255, 255, 0.25);
+
+    border-radius: 20px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+
+.subject-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        #00ffff;
+
+    box-shadow:
+
+        0 0 10px
+        rgba(0,255,255,.5),
+
+        0 0 30px
+        rgba(0,255,255,.25);
+
+}
+
+
+/* Subject icon */
+
+.subject-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Subject name */
+
+.subject-card h2 {
+
+    color: #FFD700;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* Year */
+
+.subject-card span {
+
+    display: inline-block;
+
+    padding: 6px 16px;
+
+    border-radius: 20px;
+
+    background: #FFD700;
+
+    color: #001f3f;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+/* View text */
+
+.subject-card p {
+
+    color: #00ffff;
+
+    font-size: 14px;
+
+    margin-top: 18px;
+
+}
+
+
+/* =========================================
+   POPUP BACKGROUND
+   ========================================= */
+
+.subject-modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,.80);
+
+    backdrop-filter:
+        blur(8px);
+
+    z-index: 999999;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+}
+
+
+/* =========================================
+   POPUP BOX
+   ========================================= */
+
+.subject-modal-content {
+
+    position: relative;
+
+    width: 95%;
+
+    max-width: 950px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #071b2d,
+            #0d3153
+        );
+
+    border-radius: 20px;
+
+    border: 2px solid #00ffff;
+
+    box-shadow:
+
+        0 0 10px #00ffff,
+
+        0 0 30px #00ffff,
+
+        0 0 60px
+        rgba(0,255,255,.35);
+
+    animation:
+        neonPopup .4s ease;
+}
+
+
+@keyframes neonPopup {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.85);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+   ========================================= */
+
+.close-modal {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 15px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ff1744;
+
+    color: white;
+
+    font-size: 27px;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+
+.close-modal:hover {
+
+    background: white;
+
+    color: #ff1744;
+
+}
+
+
+/* =========================================
+   MODAL HEADER
+   ========================================= */
+
+.modal-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.15);
+
+}
+
+
+.modal-icon {
+
+    font-size: 45px;
+
+}
+
+
+.modal-header h2 {
+
+    color: #FFD700;
+
+    font-size: 30px;
+
+    margin: 0;
+}
+
+
+.modal-header p {
+
+    color: #00ffff;
+
+    margin-top: 5px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   MATERIAL TITLE
+   ========================================= */
+
+.materials-title {
+
+    color: white;
+
+    margin:
+        25px 0 15px;
+
+    font-size: 22px;
+}
+
+
+/* =========================================
+   MATERIAL LIST
+   ========================================= */
+
+.material-item {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 16px;
+
+    margin-bottom: 12px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border-radius: 12px;
+
+    border:
+        1px solid
+        rgba(0,255,255,.15);
+}
+
+
+.material-name {
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+.material-buttons {
+
+    display: flex;
+
+    gap: 8px;
+}
+
+
+/* Open */
+
+.open-btn {
+
+    padding: 9px 15px;
+
+    background: #00cfff;
+
+    color: #001f3f;
+
+    border: none;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Download */
+
+.download-btn {
+
+    padding: 9px 15px;
+
+    background: #FFD700;
+
+    color: #001f3f;
+
+    border: none;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.open-btn:hover,
+.download-btn:hover {
+
+    background: white;
+
+}
+
+
+/* =========================================
+   PDF VIEWER
+   ========================================= */
+
+.pdf-viewer {
+
+    display: none;
+
+    margin-top: 25px;
+
+    border:
+        2px solid #00ffff;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: #000;
+
+    box-shadow:
+        0 0 20px
+        rgba(0,255,255,.4);
+}
+
+
+.pdf-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 15px;
+
+    background: #001f3f;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+.pdf-header button {
+
+    background: #ff1744;
+
+    color: white;
+
+    border: none;
+
+    padding: 7px 14px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+
+.pdf-viewer iframe {
+
+    width: 100%;
+
+    height: 550px;
+
+    border: none;
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 992px) {
+
+    .subject-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .resources-section {
+
+        width: 94%;
+
+    }
+
+    .resources-title {
+
+        font-size: 28px;
+
+    }
+
+    .subject-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .subject-modal {
+
+        padding: 10px;
+
+    }
+
+    .subject-modal-content {
+
+        width: 100%;
+
+        padding: 20px;
+
+        max-height: 92vh;
+
+    }
+
+    .modal-header h2 {
+
+        font-size: 23px;
+
+    }
+
+    .material-item {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .material-buttons {
+
+        width: 100%;
+
+    }
+
+    .open-btn,
+    .download-btn {
+
+        flex: 1;
+
+        text-align: center;
+
+    }
+
+    .pdf-viewer iframe {
+
+        height: 400px;
+
+    }
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-container">
+
+        <div class="logo">
+            <img src="ZETA_LOGO.png" alt="ZETA Logo">
+            <div class="logo-text">
+                <h1>ZETA ASSOCIATION</h1>
+                <p>Zone for Electronics Technologies and Automation</p>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ABOUT.HTML">About</a></li>
+                <li><a href="VISION & MISSION.HTML">Vision & Mission</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="EVENT.HTML">Event</a></li>
+                <li><a href="registered.html">Registered Members</a></li>
+                <li><a href="GALLERY.HTML">Gallery</a></li>
+                <li><a href="Resources.html">Resources</a></li>
+                <li><a href="CONTACT.HTML">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+    ☰
+</div>
+
+<div id="mobileMenu" class="mobile-menu">
+
+<a href="index.html">Home</a>
+
+<a href="ABOUT.HTML">About</a>
+
+<a href="VISION & MISSION.HTML">Vision & Mission</a>
+
+<a href="team.html">Team</a>
+
+<a href="EVENT.HTML">Event</a>
+
+<a href="registered.html">Registered Members</a>
+
+<a href="GALLERY.HTML">Gallery</a>
+
+<a href="Resources.html">Resources</a>
+
+<a href="CONTACT.HTML">Contact</a>
+
+</div>
+
+</header>
+
+<div class="announcement-bar">
+
+    <div class="announcement-title">
+        📢 Announcements :
+    </div>
+
+    <div class="announcement-wrapper">
+
+        <div class="announcement-text">
+
+            🎉 PCB Design Workshop Registration is Open |
+            📅 Workshop Date : 03 August 2026 |
+            🏆 Welcome to ZETA Association |
+            📢 Stay updated with the latest events and workshops.
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===============================
+     RESOURCES SUBJECT SECTION
+     =============================== -->
+
+<div class="resources-section">
+
+    <h1 class="resources-title">📚 ECE Study Materials</h1>
+
+    <p class="resources-subtitle">
+        Select a subject to view notes and study materials
+    </p>
+
+
+    <!-- SUBJECT BOXES -->
+
+    <div class="subject-grid">
+
+        <!-- Digital Electronics -->
+
+        <div class="subject-card"
+             onclick="openSubject('Digital Electronics','2nd Year','Digital Electronics')">
+
+            <div class="subject-icon">📘</div>
+
+            <h2>Digital Electronics</h2>
+
+            <span>2nd Year</span>
+
+            <p>View Study Materials →</p>
+
+        </div>
+
+
+        <!-- Microprocessors -->
+
+        <div class="subject-card"
+             onclick="openSubject('Microprocessors','2nd Year','Microprocessors')">
+
+            <div class="subject-icon">💻</div>
+
+            <h2>Microprocessors</h2>
+
+            <span>2nd Year</span>
+
+            <p>View Study Materials →</p>
+
+        </div>
+
+
+        <!-- Analog Electronics -->
+
+        <div class="subject-card"
+             onclick="openSubject('Analog Electronics','2nd Year','Analog Electronics')">
+
+            <div class="subject-icon">⚡</div>
+
+            <h2>Analog Electronics</h2>
+
+            <span>2nd Year</span>
+
+            <p>View Study Materials →</p>
+
+        </div>
+
+
+        <!-- Communication Systems -->
+
+        <div class="subject-card"
+             onclick="openSubject('Communication Systems','3rd Year','Communication Systems')">
+
+            <div class="subject-icon">📡</div>
+
+            <h2>Communication Systems</h2>
+
+            <span>3rd Year</span>
+
+            <p>View Study Materials →</p>
+
+        </div>
+
+
+        <!-- VLSI -->
+
+        <div class="subject-card"
+             onclick="openSubject('VLSI Design','3rd Year','VLSI Design')">
+
+            <div class="subject-icon">🔬</div>
+
+            <h2>VLSI Design</h2>
+
+            <span>3rd Year</span>
+
+            <p>View Study Materials →</p>
+
+        </div>
+
+
+        <!-- Embedded Systems -->
+
+        <div class="subject-card"
+             onclick="openSubject('Embedded Systems','3rd Year','Embedded Systems')">
+
+            <div class="subject-icon">🤖</div>
+
+            <h2>Embedded Systems</h2>
+
+            <span>3rd Year</span>
+
+            <p>View Study Materials →</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =================================
+     SUBJECT MATERIAL POPUP
+     ================================= -->
+
+<div id="subjectModal" class="subject-modal">
+
+    <div class="subject-modal-content">
+
+        <!-- Close -->
+
+        <button class="close-modal"
+                onclick="closeSubject()">
+            ×
+        </button>
+
+
+        <!-- Subject Header -->
+
+        <div class="modal-header">
+
+            <div class="modal-icon">
+                📚
+            </div>
+
+            <div>
+
+                <h2 id="modalSubject">
+                    Subject Name
+                </h2>
+
+                <p id="modalYear">
+                    Year
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Materials -->
+
+        <h3 class="materials-title">
+            📄 Study Materials
+        </h3>
+
+
+        <div id="materialsList"
+             class="materials-list">
+        </div>
+
+
+        <!-- PDF VIEWER -->
+
+        <div id="pdfViewer"
+             class="pdf-viewer">
+
+            <div class="pdf-header">
+
+                <span id="pdfTitle">
+                    PDF Preview
+                </span>
+
+                <button onclick="closePDF()">
+                    Close PDF
+                </button>
+
+            </div>
+
+            <iframe
+                id="pdfFrame"
+                src="">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</div>
+
+<section class="resources-header">
+
+<h1>RESOURCES</h1>
+
+<p>Department Resources</p>
+
+
+</SECTION>
+
+<div class="container">
+
+<div class="grid">
+
+<!-- PDF -->
+
+<div class="card">
+
+<h2>📄 PDF Notes</h2>
+
+<div class="file">
+
+<span class="file-name">
+Digital Electronics.pdf
+</span>
+
+<a href="documents/Notes/Digital Electronics.pdf"
+download
+class="download">
+
+Download
+
+</a>
+
+</div>
+
+<div class="file">
+
+<span class="file-name">
+Microprocessor Notes.pdf
+</span>
+
+<a href="documents/Notes/Microprocessor Notes.pdf"
+download
+class="download">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Word -->
+
+<div class="card">
+
+<h2>📝 Word Documents</h2>
+
+<div class="file">
+
+<span class="file-name">
+
+Assignment.docx
+
+</span>
+
+<a href="documents/Word/Assignment.docx"
+
+download
+
+class="download">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Excel -->
+
+<div class="card">
+
+<h2>📊 Excel Files</h2>
+
+<div class="file">
+
+<span class="file-name">
+
+Attendance.xlsx
+
+</span>
+
+<a href="documents/Excel/Attendance.xlsx"
+
+download
+
+class="download">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+<!-- PPT -->
+
+<div class="card">
+
+<h2>📽 PowerPoint</h2>
+
+<div class="file">
+
+<span class="file-name">
+
+Embedded Systems.pptx
+
+</span>
+
+<a href="documents/PPT/Embedded Systems.pptx"
+
+download
+
+class="download">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Videos -->
+
+<div class="card">
+
+<h2>🎥 Videos</h2>
+
+<div class="file">
+
+<span class="file-name">
+
+PCB Workshop.mp4
+
+</span>
+
+<a href="documents/Videos/PCB Workshop.mp4"
+
+download
+
+class="download">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ZIP -->
+
+<div class="card">
+
+<h2>📦 ZIP Files</h2>
+
+<div class="file">
+
+<span class="file-name">
+
+Lab Files.zip
+
+</span>
+
+<a href="documents/ZIP/Lab Files.zip"
+
+download
+
+class="download">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Useful Links -->
+
+<div class="card">
+
+<h2>🔗 Useful Links</h2>
+
+<ul>
+
+<li><a href="https://nptel.ac.in" target="_blank">NPTEL</a></li>
+
+<li><a href="https://github.com" target="_blank">GitHub</a></li>
+
+<li><a href="https://parakh.aicte-india.org/login" target="_blank">PARAKH AICTE</a></li>
+
+<li><a href="https://beharaengg.edu.in/" target="_blank">BEHARA ENGINEERING COLLEGE</a></li>
+
+<li><a href="https://avainternlms.in/" target="_blank">LMS AVAINTERN</a></li>
+
+</ul>
+
+</div>
+
+
+
+</div>
+
+<script>
+
+/* =========================================
+   SUBJECT MATERIAL DATABASE
+   ========================================= */
+
+const subjectMaterials = {
+
+    "Digital Electronics": [
+
+     {
+            name: "Digital Electronics Notes",
+            file: "documents/Notes/DIGITAL SIGNAL PROCESSING_30112018.pdf"
+        },
+
+        {
+            name: "Digital Electronics Unit 1 Notes",
+            file: "documents/Notes/Digital Electronics Unit 1.pdf"
+        },
+
+        {
+            name: "Digital Electronics Unit 2 Notes",
+            file: "documents/Notes/Digital Electronics Unit 2.pdf"
+        },
+
+        {
+            name: "Digital Electronics Question Bank",
+            file: "documents/Notes/Digital Electronics Question Bank.pdf"
+        }
+
+    ],
+
+
+    "Microprocessors": [
+
+        {
+            name: "Microprocessor Unit 1 Notes",
+            file: "documents/Notes/Microprocessor Unit 1.pdf"
+        },
+
+        {
+            name: "8086 Notes",
+            file: "documents/Notes/8086 Notes.pdf"
+        }
+
+    ],
+
+
+    "Analog Electronics": [
+
+        {
+            name: "Analog Electronics Unit 1",
+            file: "documents/Notes/Analog Electronics Unit 1.pdf"
+        }
+
+    ],
+
+
+    "Communication Systems": [
+
+        {
+            name: "Communication Systems Notes",
+            file: "documents/Notes/Communication Systems.pdf"
+        }
+
+    ],
+
+
+    "VLSI Design": [
+
+        {
+            name: "VLSI Unit 1 Notes",
+            file: "documents/Notes/VLSI Unit 1.pdf"
+        }
+
+    ],
+
+
+    "Embedded Systems": [
+
+        {
+            name: "Embedded Systems Notes",
+            file: "documents/Notes/Embedded Systems.pdf"
+        }
+
+    ]
+
+};
+
+
+/* =========================================
+   OPEN SUBJECT
+   ========================================= */
+
+function openSubject(subject, year, materialKey) {
+
+    const modal =
+        document.getElementById("subjectModal");
+
+    const subjectTitle =
+        document.getElementById("modalSubject");
+
+    const yearTitle =
+        document.getElementById("modalYear");
+
+    const materialsList =
+        document.getElementById("materialsList");
+
+
+    subjectTitle.textContent = subject;
+
+    yearTitle.textContent = year;
+
+
+    materialsList.innerHTML = "";
+
+
+    const materials =
+        subjectMaterials[materialKey] || [];
+
+
+    if (materials.length === 0) {
+
+        materialsList.innerHTML = `
+            <div class="material-item">
+                <span class="material-name">
+                    No materials available yet.
+                </span>
+            </div>
+        `;
+
+    } else {
+
+        materials.forEach(function(material) {
+
+            const item =
+                document.createElement("div");
+
+            item.className =
+                "material-item";
+
+
+            item.innerHTML = `
+
+                <span class="material-name">
+                    📄 ${material.name}
+                </span>
+
+                <div class="material-buttons">
+
+                    <button
+                        class="open-btn"
+                        onclick="openPDF(
+                            '${material.file}',
+                            '${material.name.replace(/'/g, "\\'")}'
+                        )">
+
+                        <i class="fas fa-eye"></i>
+                        Open
+
+                    </button>
+
+
+                    <a
+                        href="${material.file}"
+                        download
+                        class="download-btn">
+
+                        <i class="fas fa-download"></i>
+                        Download
+
+                    </a>
+
+                </div>
+
+            `;
+
+
+            materialsList.appendChild(item);
+
+        });
+
+    }
+
+
+    modal.style.display = "flex";
+
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* =========================================
+   CLOSE SUBJECT
+   ========================================= */
+
+function closeSubject() {
+
+    document.getElementById(
+        "subjectModal"
+    ).style.display = "none";
+
+
+    closePDF();
+
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* =========================================
+   OPEN PDF INSIDE WEBSITE
+   ========================================= */
+
+function openPDF(file, title) {
+
+    const viewer =
+        document.getElementById("pdfViewer");
+
+    const frame =
+        document.getElementById("pdfFrame");
+
+    const pdfTitle =
+        document.getElementById("pdfTitle");
+
+
+    pdfTitle.textContent =
+        title;
+
+
+    frame.src =
+        file;
+
+
+    viewer.style.display =
+        "block";
+
+
+    viewer.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
+
+}
+
+
+/* =========================================
+   CLOSE PDF
+   ========================================= */
+
+function closePDF() {
+
+    const viewer =
+        document.getElementById("pdfViewer");
+
+    const frame =
+        document.getElementById("pdfFrame");
+
+
+    viewer.style.display =
+        "none";
+
+
+    frame.src = "";
+
+}
+
+
+/* =========================================
+   CLOSE WHEN CLICKING OUTSIDE
+   ========================================= */
+
+document.getElementById(
+    "subjectModal"
+).addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target === this
+        ) {
+
+            closeSubject();
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   ESC KEY
+   ========================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeSubject();
+
+        }
+
+    }
+);
+
+</script>
+
+<script>
+function toggleMenu(){
+
+document.getElementById("mobileMenu").classList.toggle("active");
+
+}
+</script> 
+
+
+<footer>
+
+<p><strong>ZETA ASSOCIATION</strong></p>
+
+<p>
+Zone for Electronics Technologies and Automation
+</p>
+
+<p>
+BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY
+</p>
+
+<p>
+Department of Electronics and Communication Engineering
+</p>
+
+<p>© 2025 ZETA ASSOCIATION</p>
+
+</footer>
+
+</body>
+
+</html>

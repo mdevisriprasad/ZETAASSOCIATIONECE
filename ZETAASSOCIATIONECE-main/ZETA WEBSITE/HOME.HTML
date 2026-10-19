@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZETA ORGANIZATION</title>
+
+ <link rel="icon" type="image/png" href="ZETA_LOGO.png">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#081b29;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    background:#001f3f;
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-section img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+}
+
+.logo-title h2{
+    color:#FFD700;
+}
+
+.logo-title p{
+    font-size:12px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00bfff;
+}
+
+/* HERO */
+
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+    background-size:cover;
+}
+
+.hero h1{
+    font-size:60px;
+    color:#FFD700;
+}
+
+.hero h2{
+    color:#00bfff;
+    margin-top:10px;
+}
+
+.hero p{
+    max-width:900px;
+    margin-top:20px;
+    line-height:1.8;
+}
+
+.btn{
+    margin-top:30px;
+    display:inline-block;
+    padding:15px 30px;
+    background:#FFD700;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:30px;
+}
+
+/* ABOUT */
+
+.about{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.about h2{
+    color:#FFD700;
+    margin-bottom:20px;
+}
+
+.about p{
+    line-height:1.8;
+}
+
+/* FEATURES */
+
+.features{
+    padding:80px 5%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#0f2f52;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#FFD700;
+}
+
+/* NEWS */
+
+.news{
+    padding:80px 10%;
+}
+
+.news h2{
+    text-align:center;
+    color:#FFD700;
+    margin-bottom:30px;
+}
+
+.news-box{
+    background:#0f2f52;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#001f3f;
+    padding:30px;
+    text-align:center;
+    margin-top:50px;
+}
+
+footer p{
+    margin:5px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:40px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo-section">
+
+<img src="ZETA_LOGO.png" alt="ZETA Logo">
+
+<div class="logo-title">
+<h2>ZETA ORGANIZATION</h2>
+<p>Zone for Electronics Technologies and Automation</p>
+</div>
+
+</div>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="vision & mission.html">Vision & Mission</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="event.html">Event</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>ZETA ORGANIZATION</h1>
+
+<h2>
+Zone for Electronics Technologies and Automation
+</h2>
+
+<p>
+An Initiative of the Department of Electronics and Communication Engineering,
+BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY.
+Dedicated to innovation, leadership, technical excellence,
+automation and future-ready engineering skills.
+</p>
+
+<a href="membership.html" class="btn">Become a Member</a>
+
+</section>
+
+<section class="about">
+
+<h2>About ZETA</h2>
+
+<p>
+ZETA Organization is a student-driven professional and technical
+organization established under the Department of Electronics and
+Communication Engineering. It promotes innovation, automation,
+technical learning, project development, leadership and community engagement.
+</p>
+
+</section>
+
+<section class="features">
+
+<div class="card">
+<h3>Events & Workshops</h3>
+<p>Technical workshops, seminars and competitions.</p>
+</div>
+
+<div class="card">
+<h3>Project Development</h3>
+<p>Embedded systems, IoT, VLSI and automation projects.</p>
+</div>
+
+<div class="card">
+<h3>Leadership Programs</h3>
+<p>Develop leadership and organizational skills.</p>
+</div>
+
+<div class="card">
+<h3>Study Resources</h3>
+<p>Access notes, books and technical materials.</p>
+</div>
+
+</section>
+
+<section class="news">
+
+<h2>Latest News & Announcements</h2>
+
+<div class="news-box">
+New Membership Registration Open for 2026.
+</div>
+
+<div class="news-box">
+Upcoming Embedded Systems Workshop.
+</div>
+
+<div class="news-box">
+Project Expo Registration Begins Soon.
+</div>
+
+</section>
+
+<footer>
+
+<p><strong>ZETA ORGANIZATION</strong></p>
+
+<p>
+Zone for Electronics Technologies and Automation
+</p>
+
+<p>
+BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY
+</p>
+
+<p>
+Department of Electronics and Communication Engineering
+</p>
+
+</footer>
+
+</body>
+</html>

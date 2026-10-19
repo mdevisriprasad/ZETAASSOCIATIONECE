@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZETA ORGANIZATION</title>
+
+ <link rel="icon" type="image/png" href="ZETA_LOGO.png">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#081b29;
+    color:white;
+}
+
+header{
+    background:#001f3f;
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+}
+
+.logo h2{
+    color:#FFD700;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    color:#FFD700;
+    font-size:50px;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+.section-title{
+    text-align:center;
+    color:#FFD700;
+    margin:40px 0 20px;
+}
+
+.gallery{
+    padding:20px 5%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:1000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+}
+
+.modal img{
+    display:block;
+    margin:auto;
+    margin-top:5%;
+    max-width:90%;
+    max-height:80%;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:40px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+
+.nav-btn{
+    display:inline-block;
+    margin-top:25px;
+    margin-right:10px;
+    padding:15px 30px;
+    background:#FFD700;
+    color:#001f3f;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    background:white;
+}
+
+footer{
+    background:#001f3f;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:35px;
+}
+
+.gallery img{
+    height:200px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="ZETA_LOGO.png" alt="ZETA Logo">
+
+<div>
+<h2>ZETA ORGANIZATION</h2>
+<p>Zone for Electronics Technologies and Automation</p>
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+<h1>Gallery</h1>
+
+<p>
+Explore memorable moments from ZETA workshops,
+technical events, project expos and achievements.
+</p>
+
+</section>
+
+<section class="gallery-section">
+
+    <h2>Latest Event Photos</h2>
+
+    <div id="galleryContainer"></div>
+
+<h2 class="section-title">Workshops & Training Programs</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" onclick="openImage(this.src)">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" onclick="openImage(this.src)">
+
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952" onclick="openImage(this.src)">
+
+</div>
+
+<h2 class="section-title">Technical Events</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" onclick="openImage(this.src)">
+
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" onclick="openImage(this.src)">
+
+<img src="https://images.unsplash.com/photo-1515169067868-5387ec356754" onclick="openImage(this.src)">
+
+</div>
+
+<h2 class="section-title">Project Exhibitions</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475" onclick="openImage(this.src)">
+
+<img src="https://images.unsplash.com/photo-1581092918484-8313f3b2c7c4" onclick="openImage(this.src)">
+
+<img src="https://images.unsplash.com/photo-1562408590-e32931084e23" onclick="openImage(this.src)">
+
+</div>
+
+<h2 class="section-title">Achievements</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1" onclick="openImage(this.src)">
+
+<img src="https://images.unsplash.com/photo-1511578314322-379afb476865" onclick="openImage(this.src)">
+
+<img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87" onclick="openImage(this.src)">
+
+</div>
+
+<div id="imageModal" class="modal">
+
+<span class="close" onclick="closeImage()">&times;</span>
+
+<img id="modalImg">
+
+</div>
+<a href="index.html" class="nav-btn">
+← Back to Home
+</a>
+<footer>
+
+<h3>ZETA ORGANIZATION</h3>
+
+<p>
+Zone for Electronics Technologies and Automation
+</p>
+
+<p>
+BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY
+</p>
+
+<p>
+Department of Electronics & Communication Engineering
+</p>
+
+</footer>
+
+<script>
+
+let images=
+JSON.parse(
+localStorage.getItem(
+"galleryImages"
+));
+
+let container=
+document.getElementById(
+"galleryContainer"
+);
+
+if(images){
+
+images.forEach(function(img){
+
+container.innerHTML+=`
+
+<img src="${img}"
+style="
+width:250px;
+margin:10px;
+border-radius:15px;
+">
+
+`;
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZETA ORGANIZATION</title>
+
+ <link rel="icon" type="image/png" href="ZETA_LOGO.png">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#081b29;
+    color:white;
+}
+
+header{
+    background:linear-gradient(135deg,#001f3f,#003366);
+    padding:30px 20px;
+    text-align:center;
+    border-bottom:4px solid #FFD700;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+header img{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+    margin-bottom:10px;
+}
+
+header h1{
+    color:#FFD700;
+    margin-top:10px;
+    font-size:38px;
+    letter-spacing:2px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+    color:#ffffff;
+    letter-spacing:1px;
+}
+
+section{
+    padding:60px 10%;
+}
+
+h2{
+    color:#FFD700;
+    margin-bottom:20px;
+}
+
+p{
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.card{
+    background:#ffffff;
+    padding:25px;
+    border-radius:15px;
+    margin-top:25px;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+.faculty-card{
+    background:linear-gradient(135deg,#0f2f52,#174a7a);
+    border-left:5px solid #FFD700;
+}
+
+.leadership-card{
+    background:linear-gradient(135deg,#1a237e,#283593);
+    border-left:5px solid #FFD700;
+}
+
+.responsibility-card{
+    background:linear-gradient(135deg,#004d40,#00695c);
+    border-left:5px solid #FFD700;
+}
+
+.member{
+    background:rgb(255, 255, 255);
+    padding:15px;
+    margin-top:15px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.member:hover{
+    background:rgb(255, 255, 255);
+    transform:translateY(-5px);
+}
+
+.member h2{
+    color:#FFD700;
+    margin-bottom:8px;
+}
+
+ul{
+    margin-left:25px;
+    line-height:2;
+}
+
+.nav-btn{
+    display:inline-block;
+    margin-top:25px;
+    margin-right:10px;
+    padding:15px 30px;
+    background:#FFD700;
+    color:#001f3f;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    background:white;
+}
+
+footer{
+    background:#001f3f;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+.members-gallery{
+
+width:90%;
+margin:40px auto;
+
+}
+
+.member-card{
+
+display:flex;
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+margin-bottom:30px;
+
+transition:0.3s;
+
+}
+
+.member-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.member-photo{
+
+width:200px;
+
+}
+
+.member-photo img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+}
+
+.member-info{
+
+padding:25px;
+
+flex:1;
+
+color:#222;
+
+}
+
+.member-info h2{
+
+color:#001f3f;
+
+margin-bottom:20px;
+
+}
+
+.member-info p{
+
+font-size:18px;
+
+margin-bottom:12px;
+
+}
+
+.view-btn{
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:10px 20px;
+
+background:#001f3f;
+
+color:#FFD700;
+
+text-decoration:none;
+
+border-radius:8px;
+
+font-weight:bold;
+
+}
+
+.view-btn:hover{
+
+background:#FFD700;
+
+color:#001f3f;
+
+}
+
+@media(max-width:768px){
+
+.member-card{
+
+flex-direction:column;
+
+}
+
+.member-photo{
+
+width:100%;
+
+}
+
+}
+
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<img src="ZETA_LOGO.png" alt="ZETA Logo">
+
+<h1>ZETA ORGANIZATION</h1>
+
+<p>
+Zone for Electronics Technologies and Automation
+</p>
+
+</header>
+
+<section class="members-gallery">
+
+    <h2>Our Team</h2>
+
+<p>
+The ZETA Organization is guided by experienced faculty members and
+driven by a dedicated student leadership team committed to innovation,
+technical excellence, and professional development.
+</p>
+
+<h1 class="section-title">
+Faculty Advisory Board
+</h1>
+
+<div class="card faculty-card">
+
+<h2>Faculty Members</h2>
+
+<div class="faculty member-card">
+
+<div class="member-photo">
+<img src="G.SRIKANTH.png" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">Mr G.SRIKANTH</h2>
+<p class="paras-head"><b>Position :</b> Head of Department (HOD)</p>
+<p class="text-left HOD-info"><b>Designation :</b> Assistant Professor</p>
+<p class="text-left HOD-info"><b>Qualification :</b>M.Tech., (Ph.D)</p>
+<p>Department of Electronics and Communication Engineering</p>
+</div>
+
+</div>
+
+<div class="faculty member-card">
+
+<div class="member-photo">
+<img src="V.ANIL KUMAR.png" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">Mr V.ANIL KUMAR</h2>
+<p class="paras-head"><b>Position :</b> Faculty Coordinator</p>
+<p class="text-left FACULTY COORDINATOR-info"><b>Designation :</b> Assistant Professor</p>
+<p class="text-left FACULTY COORDINATOR-info"><b>Qualification :</b>M.Tech., (Ph.D)</p>
+<p>
+Provides guidance for technical activities, workshops,
+industrial visits, and student development programs.
+</p>
+
+</div>
+
+</div>
+
+<div class="faculty member-card">
+
+<div class="member-photo">
+<img src="K.JOTSHNA.jpg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">MrS. K.JOTSHNA</h2>
+<p class="paras-head"><b>Position :</b> Faculty Incharge</p>
+<p class="text-left FACULTY INCHARGE-info"><b>Designation :</b> Assistant Professor</p>
+<p class="text-left FACULTY INCHARGE-info"><b>Qualification :</b>M.Tech.,</p>
+<p>
+Supports planning and execution of organizational activities.
+</p>
+
+</div>
+
+</div>
+
+<!-- Student Leadership Team -->
+
+<h1 class="section-title">
+Student Executive Committee
+</h1>
+
+<h2>Student Leadership Team</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="A.BALADITHYA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">A.BALADITHYA</h2>
+<p class="paras-head"><b>Position :</b> President</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Leads the organization and oversees all activities and events</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="M.DEVI SRI PRASAD.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">M.DEVI SRI PRASAD</h2>
+<p class="paras-head"><b>Position :</b> Vice President</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Supports the President and coordinates organizational operations</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="V.LAKSHMANA RAO.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">V.LAKSHMANA RAO</h2>
+<p class="paras-head"><b>Position :</b> Secretary </p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Manages records, meeting schedules, and communication</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="G.KISHORE.jpg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">G.KISHORE</h2>
+<p class="paras-head"><b>Position :</b> Joint Secretary </p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Manages records, meeting schedules, and communication</p>
+</div>
+
+</div>
+
+<h1 class="section-title">
+Student Co-ordinator Committee
+</h1>
+
+<h2>Financial Department</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="G.PRAGATHI.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">G.PRAGATHI</h2>
+<p class="paras-head"><b>Position :</b> FINANCIAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles financial planning and budget management</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="A.BALADITHYA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">A.BALADITHYA</h2>
+<p class="paras-head"><b>Position :</b> FINANCIAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles financial planning and budget management</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="C:\Users\dspra\OneDrive\Desktop\ECE MEMBERS PHOTO\V.MADHUMITHA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">V.MADHUMITHA</h2>
+<p class="paras-head"><b>Position :</b> FINANCIAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles financial planning and budget management</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="V.MADHUMITHA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">B.JASWANTH</h2>
+<p class="paras-head"><b>Position :</b> FINANCIAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles financial planning and budget management</p>
+</div>
+
+</div>
+
+<h2>Technical Department</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="D.MANASA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">D.MANASA </h2>
+<p class="paras-head"><b>Position :</b> TECHNICAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Organizes workshops, technical events, and project activities</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="N.NANAJI.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">N.NANAJI </h2>
+<p class="paras-head"><b>Position :</b> TECHNICAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Organizes workshops, technical events, and project activities</p>
+</div>
+
+</div>
+
+<h2>Sports Department</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="G.VASU.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">G.VASU </h2>
+<p class="paras-head"><b>Position :</b> SPORTS DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Organizes sports events and promotes physical fitness</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="M.VAMSI.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">M.VAMSI </h2>
+<p class="paras-head"><b>Position :</b> SPORTS DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Organizes sports events and promotes physical fitness</p>
+</div>
+
+</div>
+
+<h2>Cultural Department</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="K.VARSHINI.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">K.VARSHINI </h2>
+<p class="paras-head"><b>Position :</b> CULTURAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Organizes cultural events and promotes artistic expression</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="K.THARUN SAI.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">T.THARUN SAI </h2>
+<p class="paras-head"><b>Position :</b> CULTURAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Organizes cultural events and promotes artistic expression</p>
+</div>
+
+</div>
+
+<h2>Organizing Department</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="D.MEGHANA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">D.MEGHANA</h2>
+<p class="paras-head"><b>Position :</b> ORGANIZING DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Plans, coordinates, and manages workshops, technical events, seminars, competitions, and project-related activities to ensure their successful execution</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="G.KISHORE.jpg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">G.KISHORE</h2>
+<p class="paras-head"><b>Position :</b> ORGANIZING DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Plans, coordinates, and manages workshops, technical events, seminars, competitions, and project-related activities to ensure their successful execution</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="V.LAKSHMANA RAO.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">V.LAKSHMANA RAO</h2>
+<p class="paras-head"><b>Position :</b> ORGANIZING DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Plans, coordinates, and manages workshops, technical events, seminars, competitions, and project-related activities to ensure their successful execution</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="A.UDAY MANIKANTA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">A.UDAY MANIKANTA</h2>
+<p class="paras-head"><b>Position :</b> ORGANIZING DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Plans, coordinates, and manages workshops, technical events, seminars, competitions, and project-related activities to ensure their successful execution</p>
+</div>
+
+</div>
+
+<h2>NSS Department (National Service Scheme)</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="E.BHARGAV.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">E.BHARGAV</h2>
+<p class="paras-head"><b>Position :</b> NSS DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles NSS-related activities and community service initiatives</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="P.MEGHAMALA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">P.MEGHAMALA</h2>
+<p class="paras-head"><b>Position :</b> NSS DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles NSS-related activities and community service initiatives</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="P.SAI SURYA TEJA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">P.SAI SURYA TEJA</h2>
+<p class="paras-head"><b>Position :</b> NSS DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles NSS-related activities and community service initiatives</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="T.THANU SRI.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">T.THANU SRI</h2>
+<p class="paras-head"><b>Position :</b> NSS DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles NSS-related activities and community service initiatives</p>
+</div>
+
+</div>
+<!-- Responsibilities -->
+
+<div class="card responsibility-card">
+
+<h2>Leadership Responsibilities</h2>
+
+<ul>
+<li>Organize technical workshops and seminars.</li>
+<li>Promote technical innovation and project development.</li>
+<li>Coordinate student participation in competitions.</li>
+<li>Maintain communication among members.</li>
+<li>Build industry and alumni connections.</li>
+<li>Encourage teamwork and leadership skills.</li>
+<li>Support research and emerging technologies.</li>
+</ul>
+
+</div>
+
+<a href="index.html" class="nav-btn">
+← Back to Home
+</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 ZETA ORGANIZATION</p>
+
+<p>
+BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY
+</p>
+
+</footer>
+
+</body>
+</html>

@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<title>ZETA ASSOCIATION</title>
+<title>ZETA ORGANIZATION</title>
 
  <link rel="icon" type="image/png" href="ZETA_LOGO.png">
 
@@ -24,116 +22,93 @@ body{
     color:white;
 }
 
-/* ================= HEADER ================= */
-.header{
-
-    width:100%;
-
-    background:#0b2b52;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    padding:15px 40px;
-
-}
-.logo-section{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.logo-section img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-}
-
-.logo-text h1{
-    color:#FFD700;
-    font-size:22px;
-    font-weight:700;
-    margin:0;
-    text-transform:uppercase;
-}
-
-.logo-text p{
-    color:#ffffff;
-    font-size:14px;
-    margin-top:4px;
-}
-
-.logo-section{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.logo-section img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-}
-
-.logo-title h2{
-    color:#FFD700;
-}
-
-.logo-title p{
-    font-size:12px;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:20px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#ffee00;
-}
-
-
-footer{
-    background:#001f3f;
+header{
+    background:linear-gradient(135deg,#001f3f,#003366);
+    padding:30px 20px;
     text-align:center;
-    padding:20px;
+    border-bottom:4px solid #FFD700;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+header img{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+    margin-bottom:10px;
+}
+
+header h1{
+    color:#FFD700;
+    margin-top:10px;
+    font-size:38px;
+    letter-spacing:2px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+    color:#ffffff;
+    letter-spacing:1px;
 }
 
 section{
-    width:90%;
-    max-width:1200px;
-    margin:50px auto;
+    padding:60px 10%;
 }
 
-section h2{
+h2{
     color:#FFD700;
-    font-size:36px;
-    margin-bottom:25px;
-}
-
-section p{
-    font-size:18px;
-    line-height:1.9;
-    color:#f5f5f5;
     margin-bottom:20px;
 }
 
+p{
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
 .card{
-    background:#0d376e;
+    background:#ffffff;
     padding:25px;
     border-radius:15px;
     margin-top:25px;
-    box-shadow:0 0 15px rgba(255, 255, 255, 0.897);
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+.faculty-card{
+    background:linear-gradient(135deg,#0f2f52,#174a7a);
+    border-left:5px solid #FFD700;
+}
+
+.leadership-card{
+    background:linear-gradient(135deg,#1a237e,#283593);
+    border-left:5px solid #FFD700;
+}
+
+.responsibility-card{
+    background:linear-gradient(135deg,#004d40,#00695c);
+    border-left:5px solid #FFD700;
+}
+
+.member{
+    background:rgb(255, 255, 255);
+    padding:15px;
+    margin-top:15px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.member:hover{
+    background:rgb(255, 255, 255);
+    transform:translateY(-5px);
+}
+
+.member h2{
+    color:#FFD700;
+    margin-bottom:8px;
+}
+
+ul{
+    margin-left:25px;
+    line-height:2;
 }
 
 .nav-btn{
@@ -158,6 +133,78 @@ footer{
     text-align:center;
     padding:20px;
     margin-top:40px;
+}
+
+.members-gallery{
+
+width:90%;
+margin:40px auto;
+
+}
+
+.member-card{
+
+display:flex;
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+margin-bottom:30px;
+
+transition:0.3s;
+
+}
+
+.member-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.member-photo{
+
+width:200px;
+
+}
+
+.member-photo img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+}
+
+.member-info{
+
+padding:25px;
+
+flex:1;
+
+color:#222;
+
+}
+
+.member-info h2{
+
+color:#001f3f;
+
+margin-bottom:20px;
+
+}
+
+.member-info p{
+
+font-size:18px;
+
+margin-bottom:12px;
+
 }
 
 .view-btn{
@@ -188,354 +235,39 @@ color:#001f3f;
 
 }
 
-.menu-toggle{
-    display:none;
-}
-
-/* Hamburger */
-
-.menu-btn{
-
-    display:none;
-
-    font-size:28px;
-
-    color:white;
-
-    cursor:pointer;
-
-    margin-left:25px;
-
-}
-
-/* Mobile Menu */
-
-/* ================= MOBILE MENU ================= */
-
-.menu-toggle{
-    display:none;
-    font-size:32px;
-    color:#FFD700;
-    cursor:pointer;
-}
-
-#mobileMenu{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:90px;
-    left:0;
-    width:100%;
-    background:#0b2b52;
-    box-shadow:0 10px 20px rgba(0,0,0,.4);
-    z-index:9999;
-}
-
-#mobileMenu.active{
-    display:flex;
-}
-
-#mobileMenu a{
-    color:#fff;
-    text-decoration:none;
-    padding:16px 20px;
-    border-bottom:1px solid rgba(255,255,255,.15);
-    font-size:17px;
-    font-weight:600;
-    transition:.3s;
-}
-
-#mobileMenu a:hover{
-    background:#FFD700;
-    color:#081b29;
-}
-/* Mobile */
-
-@media screen and (max-width:768px){
-
-.header{
-    padding:12px 15px;
-    justify-content:space-between;
-}
-
-.logo-section{
-    gap:10px;
-}
-
-.logo-section img{
-    width:45px;
-    height:45px;
-}
-
-.logo-text h1{
-    font-size:18px;
-}
-
-.logo-text p{
-    font-size:11px;
-}
-
-nav{
-    display:none;
-}
-
-.menu-toggle{
-    display:block;
-}
-
-section{
-    width:95%;
-    margin:30px auto;
-}
-
-section h2{
-    font-size:28px;
-}
-
-section p{
-    font-size:16px;
-}
-
-.card{
-    padding:18px;
-}
-
-}
-
-.announcement-bar{
-    display:flex;
-    align-items:center;
-    background:#1c0640;
-    border-top:2px solid #061385;
-    border-bottom:2px solid #061385;
-    overflow:hidden;
-}
-
-.announcement-title{
-    background:#063777;
-    color:#ffffff;
-    padding:14px 22px;
-    font-size:18px;
-    font-weight:bold;
-    z-index:2;
-}
-
-.announcement-wrapper{
-    flex:1;
-    overflow:hidden;
-    white-space:nowrap;
-}
-
-.announcement-text{
-    display:inline-block;
-    padding-left:100%;
-    animation:scrollText 60s linear infinite;
-    color:#fff;
-    font-size:17px;
-    font-weight:600;
-}
-
-@keyframes scrollText{
-
-    from{
-        transform:translateX(0);
-    }
-
-    to{
-        transform:translateX(-100%);
-    }
-
-}
-
-.team-container{
-    width:95%;
-    max-width:1400px;
-    margin:40px auto;
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:30px;
-}
-
-.team-card{
-    background:#ffffff;
-    border-radius:15px;
-    padding:25px 20px;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,0.2);
-    transition:0.3s;
-}
-
-.team-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 12px 30px rgba(0,0,0,0.3);
-}
-
-.team-card img{
-    width:130px;
-    height:130px;
-    object-fit:cover;
-    border-radius:100px;
-    border: 3px solid #ffa114;
-    box-shadow: 0 0 5px #ffa114, 0 0 15px #ffa114, 0 0 30px #ffa114;
-    margin-bottom:15px;
-}
-
-.team-card h3{
-    color:#0b2b52;
-    font-size:22px;
-    margin-bottom:10px;
-}
-
-.team-card .position{
-    display:inline-block;
-    background:#FFD700;
-    color:#001f3f;
-    padding:7px 18px;
-    border-radius:60px;
-    font-size:15px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-.team-card p{
-    color:#444;
-    font-size:15px;
-    line-height:1.7;
-    margin:5px 0;
-}
-
-/* Tablet */
-@media(max-width:992px){
-
-.team-container{
-    grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-/* Mobile */
 @media(max-width:768px){
 
-.team-container{
-    grid-template-columns:1fr;
-}
+.member-card{
 
-.team-card{
-    padding:20px;
-}
-
-.team-card img{
-    width:120px;
-    height:120px;
-}
+flex-direction:column;
 
 }
 
-/* Leadership Responsibilities */
+.member-photo{
 
-.responsibility-card{
-    background:#367c28;      /* Change to any color you like */
-    border-radius:18px;
-    padding:35px;
-    margin-top:30px;
+width:100%;
+
 }
 
-.responsibility-card h2{
-    color:#FFD700;
-    font-size:35px;
-    margin-bottom:20px;
 }
 
-.responsibility-card ul{
-    padding-left:28px;
-}
-
-.responsibility-card li{
-    color:#ffffff;
-    font-size:20px;          /* Increase font size */
-    line-height:2;
-    margin-bottom:10px;
-}
 
 </style>
 
 </head>
 <body>
 
+<header>
 
+<img src="ZETA_LOGO.png" alt="ZETA Logo">
 
-<header class="header">
-    <div class="logo-section">
-        <img src="ZETA_LOGO.png" alt="ZETA Logo">
+<h1>ZETA ORGANIZATION</h1>
 
-        <div class="logo-text">
-            <h1>ZETA ASSOCIATION</h1>
-            <p>Zone for Electronics Technologies and Automation</p>
-        </div>
-    </div>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="VISION & MISSION.HTML">Vision & Mission</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="EVENT.HTML">Event</a></li>
-            <li><a href="registered.html">Registered Members</a></li>
-            <li><a href="GALLERY.HTML">Gallery</a></li>
-            <li><a href="Resources.html">Resources</a></li>
-            <li><a href="CONTACT.HTML">Contact</a></li>
-        </ul>
-    </nav>
-
-<div class="menu-toggle" onclick="toggleMenu()">
-    ☰
-</div>
-
-<div id="mobileMenu" class="mobile-menu">
-
-<a href="index.html">Home</a>
-
-<a href="ABOUT.HTML">About</a>
-
-<a href="VISION & MISSION.HTML">Vision & Mission</a>
-
-<a href="team.html">Team</a>
-
-<a href="EVENT.HTML">Event</a>
-
-<a href="REGISTERED.HTML">Registered Members</a>
-
-<a href="GALLERY.HTML">Gallery</a>
-
-<a href="Resources.html">Resources</a>
-
-<a href="CONTACT.HTML">Contact</a>
-
-</div>
+<p>
+Zone for Electronics Technologies and Automation
+</p>
 
 </header>
-
-<div class="announcement-bar">
-
-    <div class="announcement-title">
-        📢 Announcements :
-    </div>
-
-    <div class="announcement-wrapper">
-
-        <div class="announcement-text">
-
-            🎉 PCB Design Workshop Registration is Open |
-            📅 Workshop Date : 03 August 2026 |
-            🏆 Welcome to ZETA Association |
-            📢 Stay updated with the latest events and workshops.
-
-        </div>
-
-    </div>
-
-</div>
 
 <section class="members-gallery">
 
@@ -550,96 +282,61 @@ technical excellence, and professional development.
 <h1 class="section-title">
 Faculty Advisory Board
 </h1>
+
 <div class="card faculty-card">
 
 <h2>Faculty Members</h2>
 
-<div class="team-container">
+<div class="faculty member-card">
 
-    <!-- Card 1 -->
+<div class="member-photo">
+<img src="G.SRIKANTH.png" alt="Photo" class="w-50">
+</div>
 
-    <div class="team-card">
-        <img src="G.SRIKANTH.png" alt="">
-        <h3>Mr G. SRIKANTH</h3>
+<div class="member-info">
+<h2 class="incharge-title">Mr G.SRIKANTH</h2>
+<p class="paras-head"><b>Position :</b> Head of Department (HOD)</p>
+<p class="text-left HOD-info"><b>Designation :</b> Assistant Professor</p>
+<p class="text-left HOD-info"><b>Qualification :</b>M.Tech., (Ph.D)</p>
+<p>Department of Electronics and Communication Engineering</p>
+</div>
 
-        <span class="position">
-            Head of Department
-        </span>
+</div>
 
-        <p><b>Designation :</b> Assistant Professor</p>
+<div class="faculty member-card">
 
-        <p><b>Qualification :</b> M.Tech., (Ph.D)</p>
+<div class="member-photo">
+<img src="V.ANIL KUMAR.png" alt="Photo" class="w-50">
+</div>
 
-        <p>Department of Electronics and Communication Engineering</p>
-    </div>
+<div class="member-info">
+<h2 class="incharge-title">Mr V.ANIL KUMAR</h2>
+<p class="paras-head"><b>Position :</b> Faculty Coordinator</p>
+<p class="text-left FACULTY COORDINATOR-info"><b>Designation :</b> Assistant Professor</p>
+<p class="text-left FACULTY COORDINATOR-info"><b>Qualification :</b>M.Tech., (Ph.D)</p>
+<p>
+Provides guidance for technical activities, workshops,
+industrial visits, and student development programs.
+</p>
 
-    <!-- Card 2 -->
+</div>
 
-    <div class="team-card">
-        <img src="V.ANIL KUMAR.png" alt="">
-        <h3>Mr V. ANIL KUMAR</h3>
+</div>
 
-        <span class="position">
-            IQAC Coordinator
-        </span>
+<div class="faculty member-card">
 
-        <p><b>Designation :</b> Assistant Professor</p>
+<div class="member-photo">
+<img src="K.JOTSHNA.jpg" alt="Photo" class="w-50">
+</div>
 
-        <p><b>Qualification :</b> M.Tech., (Ph.D)</p>
-
-        <p>Provides guidance for workshops and technical activities.</p>
-    </div>
-
-    <!-- Card 3 -->
-
-    <div class="team-card">
-        <img src="K.JOTSHNA.jpg" alt="">
-        <h3>Mrs K. JOTSHNA</h3>
-
-        <span class="position">
-            ClassIncharge
-        </span>
-
-        <p><b>Designation :</b> Assistant Professor</p>
-
-        <p><b>Qualification :</b> M.Tech</p>
-
-        <p>Supports planning and execution of organizational activities.</p>
-    </div>
-
-<!-- Card 4 -->
-
-    <div class="team-card">
-        <img src="G.INDIRA.jpeg" alt="">
-        <h3>Mrs G. INDIRA</h3>
-
-        <span class="position">
-            Class Incharge
-        </span>
-
-        <p><b>Designation :</b> Assistant Professor</p>
-
-        <p><b>Qualification :</b> M.Tech</p>
-
-        <p>Guides students towards academic excellence, discipline, and active participation in class activities</p>
-    </div>
-
-<!-- Card 5 -->
-
-    <div class="team-card">
-        <img src="E.SHIVA JI.jpeg" alt="">
-        <h3>Mr E. SHIVA JI</h3>
-
-        <span class="position">
-            Department TPO
-        </span>
-
-        <p><b>Designation :</b> Assistant Professor</p>
-
-        <p><b>Qualification :</b> MEMIE</p>
-
-        <p>Bridges the gap between students and industry through career guidance and placement opportunities.</p>
-    </div>
+<div class="member-info">
+<h2 class="incharge-title">MrS. K.JOTSHNA</h2>
+<p class="paras-head"><b>Position :</b> Faculty Incharge</p>
+<p class="text-left FACULTY INCHARGE-info"><b>Designation :</b> Assistant Professor</p>
+<p class="text-left FACULTY INCHARGE-info"><b>Qualification :</b>M.Tech.,</p>
+<p>
+Supports planning and execution of organizational activities.
+</p>
 
 </div>
 
@@ -651,84 +348,375 @@ Faculty Advisory Board
 Student Executive Committee
 </h1>
 
-<div class="card faculty-card">
 <h2>Student Leadership Team</h2>
 
-<div class="team-container">
+<div class="student member-card">
 
-    <!-- Card 1 -->
+<div class="member-photo">
+<img src="A.BALADITHYA.jpeg" alt="Photo" class="w-50">
+</div>
 
-    <div class="team-card">
-        <img src="A.BALADITHYA.jpeg" alt="">
-        <h3>A. BALADITHYA</h3>
-
-        <span class="position">
-            President
-        </span>
-
-        <p><b>Designation :</b> Student</p>
-
-        <p><b>Qualification :</b> B.Tech</p>
-
-        <p>Leads the organization and represents the student body.</p>
-    </div>
-
-    <!-- Card 2 -->
-
-    <div class="team-card">
-        <img src="M.DEVI SRI PRASAD.jpeg" alt="">
-        <h3>M. DEVI SRI PRASAD</h3>
-
-        <span class="position">
-            Vice President
-        </span>
-
-        <p><b>Designation :</b> Student</p>
-
-        <p><b>Qualification :</b> B.Tech</p>
-
-        <p>Supports the President in leading the organization.</p>
-    </div>
-
-    <!-- Card 3 -->
-
-    <div class="team-card">
-        <img src="V.LAKSHMANA RAO.jpeg" alt="">
-        <h3>V. LAKSHMANA RAO</h3>
-
-        <span class="position">
-            Secretary
-        </span>
-
-        <p><b>Designation :</b> Student</p>
-
-        <p><b>Qualification :</b> B.Tech</p>
-
-        <p>Manages records, meeting schedules, and communication</p>
-    </div>
-
-<!-- Card 4 -->
-
-    <div class="team-card">
-        <img src="G.KISHORE.jpg" alt="">
-        <h3>G. KISHORE</h3>
-
-        <span class="position">
-            Joint Secretary
-        </span>
-
-        <p><b>Designation :</b> Student</p>
-
-        <p><b>Qualification :</b> B.Tech</p>
-
-        <p>Manages records, meeting schedules, and communication</p>
-    </div>
-
+<div class="member-info">
+<h2 class="incharge-title">A.BALADITHYA</h2>
+<p class="paras-head"><b>Position :</b> President</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Leads the organization and oversees all activities and events</p>
 </div>
 
 </div>
 
+<div class="student member-card">
 
+<div class="member-photo">
+<img src="M.DEVI SRI PRASAD.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">M.DEVI SRI PRASAD</h2>
+<p class="paras-head"><b>Position :</b> Vice President</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Supports the President and coordinates organizational operations</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="V.LAKSHMANA RAO.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">V.LAKSHMANA RAO</h2>
+<p class="paras-head"><b>Position :</b> Secretary </p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Manages records, meeting schedules, and communication</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="G.KISHORE.jpg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">G.KISHORE</h2>
+<p class="paras-head"><b>Position :</b> Joint Secretary </p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Manages records, meeting schedules, and communication</p>
+</div>
+
+</div>
+
+<h1 class="section-title">
+Student Co-ordinator Committee
+</h1>
+
+<h2>Financial Department</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="G.PRAGATHI.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">G.PRAGATHI</h2>
+<p class="paras-head"><b>Position :</b> FINANCIAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles financial planning and budget management</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="A.BALADITHYA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">A.BALADITHYA</h2>
+<p class="paras-head"><b>Position :</b> FINANCIAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles financial planning and budget management</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="C:\Users\dspra\OneDrive\Desktop\ECE MEMBERS PHOTO\V.MADHUMITHA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">V.MADHUMITHA</h2>
+<p class="paras-head"><b>Position :</b> FINANCIAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles financial planning and budget management</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="V.MADHUMITHA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">B.JASWANTH</h2>
+<p class="paras-head"><b>Position :</b> FINANCIAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles financial planning and budget management</p>
+</div>
+
+</div>
+
+<h2>Technical Department</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="D.MANASA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">D.MANASA </h2>
+<p class="paras-head"><b>Position :</b> TECHNICAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Organizes workshops, technical events, and project activities</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="N.NANAJI.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">N.NANAJI </h2>
+<p class="paras-head"><b>Position :</b> TECHNICAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Organizes workshops, technical events, and project activities</p>
+</div>
+
+</div>
+
+<h2>Sports Department</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="G.VASU.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">G.VASU </h2>
+<p class="paras-head"><b>Position :</b> SPORTS DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Organizes sports events and promotes physical fitness</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="M.VAMSI.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">M.VAMSI </h2>
+<p class="paras-head"><b>Position :</b> SPORTS DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Organizes sports events and promotes physical fitness</p>
+</div>
+
+</div>
+
+<h2>Cultural Department</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="K.VARSHINI.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">K.VARSHINI </h2>
+<p class="paras-head"><b>Position :</b> CULTURAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Organizes cultural events and promotes artistic expression</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="K.THARUN SAI.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">T.THARUN SAI </h2>
+<p class="paras-head"><b>Position :</b> CULTURAL DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Organizes cultural events and promotes artistic expression</p>
+</div>
+
+</div>
+
+<h2>Organizing Department</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="D.MEGHANA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">D.MEGHANA</h2>
+<p class="paras-head"><b>Position :</b> ORGANIZING DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Plans, coordinates, and manages workshops, technical events, seminars, competitions, and project-related activities to ensure their successful execution</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="G.KISHORE.jpg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">G.KISHORE</h2>
+<p class="paras-head"><b>Position :</b> ORGANIZING DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Plans, coordinates, and manages workshops, technical events, seminars, competitions, and project-related activities to ensure their successful execution</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="V.LAKSHMANA RAO.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">V.LAKSHMANA RAO</h2>
+<p class="paras-head"><b>Position :</b> ORGANIZING DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Plans, coordinates, and manages workshops, technical events, seminars, competitions, and project-related activities to ensure their successful execution</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="A.UDAY MANIKANTA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">A.UDAY MANIKANTA</h2>
+<p class="paras-head"><b>Position :</b> ORGANIZING DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Plans, coordinates, and manages workshops, technical events, seminars, competitions, and project-related activities to ensure their successful execution</p>
+</div>
+
+</div>
+
+<h2>NSS Department (National Service Scheme)</h2>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="E.BHARGAV.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">E.BHARGAV</h2>
+<p class="paras-head"><b>Position :</b> NSS DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles NSS-related activities and community service initiatives</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="P.MEGHAMALA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">P.MEGHAMALA</h2>
+<p class="paras-head"><b>Position :</b> NSS DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles NSS-related activities and community service initiatives</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="P.SAI SURYA TEJA.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">P.SAI SURYA TEJA</h2>
+<p class="paras-head"><b>Position :</b> NSS DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles NSS-related activities and community service initiatives</p>
+</div>
+
+</div>
+
+<div class="student member-card">
+
+<div class="member-photo">
+<img src="T.THANU SRI.jpeg" alt="Photo" class="w-50">
+</div>
+
+<div class="member-info">
+<h2 class="incharge-title">T.THANU SRI</h2>
+<p class="paras-head"><b>Position :</b> NSS DEPARTMENT</p>
+<p class="text-left HOD-info"><b>Designation :</b> Student</p>
+<p class="text-left HOD-info"><b>Qualification :</b>B.Tech</p>
+<p>Handles NSS-related activities and community service initiatives</p>
+</div>
+
+</div>
 <!-- Responsibilities -->
 
 <div class="card responsibility-card">
@@ -747,34 +735,19 @@ Student Executive Committee
 
 </div>
 
+<a href="index.html" class="nav-btn">
+← Back to Home
+</a>
 
 </section>
 
-<script>
-function toggleMenu(){
-
-document.getElementById("mobileMenu").classList.toggle("active");
-
-}
-</script>
-
 <footer>
 
-<p><strong>ZETA ASSOCIATION</strong></p>
-
-<p>
-Zone for Electronics Technologies and Automation
-</p>
+<p>© 2026 ZETA ORGANIZATION</p>
 
 <p>
 BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY
 </p>
-
-<p>
-Department of Electronics and Communication Engineering
-</p>
-
-<p>© 2025 ZETA ASSOCIATION</p>
 
 </footer>
 

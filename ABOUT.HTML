@@ -3,22 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-
-<title>ZETA ASSOCIATION</title>
+<title>ZETA ORGANIZATION</title>
 
  <link rel="icon" type="image/png" href="ZETA_LOGO.png">
-
-
 <style>
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Segoe UI, sans-serif;
+    font-family:Segoe UI,sans-serif;
 }
 
 body{
@@ -26,238 +21,56 @@ body{
     color:white;
 }
 
-/* HEADER */
-
-.header{
-
-    width:100%;
-
-    background:#0b2b52;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:15px 25px;
-
-    position:relative;
-
-    z-index:10000;
+header{
+    background:#001f3f;
+    padding:15px;
+    text-align:center;
 }
 
-.logo-section{
-    display:flex;
-    align-items:center;
-    gap:15px;
+header img{
+    width:80px;
 }
 
-.logo-section img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-}
-
-.logo-title h2{
+header h1{
     color:#FFD700;
+    margin-top:10px;
 }
 
-.logo-title p{
-    font-size:12px;
+section{
+    padding:60px 10%;
 }
 
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
-background:#001f3f;
-position:sticky;
-top:0;
-z-index:999;
+h2{
+    color:#FFD700;
+    margin-bottom:20px;
 }
 
-.nav-logo{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.nav-logo img{
-width:60px;
-height:60px;
-}
-
-.nav-logo h2{
-color:#FFD700;
-margin:0;
-}
-
-.nav-logo p{
-font-size:13px;
-color:white;
-margin-top:4px;
-}
-
-.desktop-menu{
-display:flex;
-gap:18px;
-}
-
-.desktop-menu a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-transition:.3s;
-}
-
-.desktop-menu a:hover{
-color:#FFD700;
-}
-
-.menu-btn{
-display:none;
-font-size:30px;
-cursor:pointer;
-color:#FFD700;
-}
-
-.menu-toggle{
-    display:none;
-}
-
-/* Hamburger */
-
-.menu-btn{
-
-    display:none;
-
-    font-size:28px;
-
-    color:white;
-
-    cursor:pointer;
-
-    margin-left:25px;
-
-}
-
-/* Mobile Menu */
-
-/* ================= MOBILE MENU ================= */
-
-#mobileMenu{
-    display:none;
-    flex-direction:column;
-
-    position:absolute;
-    top:100%;
-    left:0;
-
-    width:100%;
-
-    background:#0b2b52;
-
-    z-index:99999;
-}
-
-#mobileMenu.active{
-    display:flex;
-}
-
-#mobileMenu a{
-    color:#fff;
-    text-decoration:none;
-    padding:18px;
-    border-bottom:1px solid rgba(255,255,255,.15);
-    font-size:17px;
-}
-
-#mobileMenu a:hover{
-    background:#FFD700;
-    color:#081b29;
-}
-/* ================= MOBILE ================= */
-
-@media only screen and (max-width:768px){
-
-    /* Header */
-    .header{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        padding:12px 15px;
-        position:relative;
-    }
-
-    /* Logo */
-    .logo-section{
-        flex:1;
-        display:flex;
-        align-items:center;
-        gap:10px;
-    }
-
-    .logo-section img{
-        width:45px;
-        height:45px;
-    }
-
-    .logo-text h1{
-        font-size:18px;
-        line-height:1.2;
-    }
-
-    .logo-text p{
-        font-size:10px;
-    }
-
-    /* Hide Desktop Navigation */
-    nav,
-    .navbar,
-    .header nav{
-        display:none !important;
-    }
-
-    /* Show Menu Button */
-    .menu-toggle{
-        display:block !important;
-        font-size:30px;
-        color:#FFD700;
-        cursor:pointer;
-    }
-
+p{
+    line-height:1.8;
+    margin-bottom:20px;
 }
 
 .card{
-    padding:18px;
+    background:#0f2f52;
+    padding:25px;
+    border-radius:15px;
+    margin-top:20px;
 }
 
-.logo-section{
-    display:flex;
-    align-items:center;
-    gap:15px;
+.nav-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    background:#FFD700;
+    color:#001f3f;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:25px;
+    transition:0.3s;
 }
 
-.logo-section img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-}
-
-.logo-title h2{
-    color:#FFD700;
-}
-
-.logo-title p{
-    font-size:12px;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:20px;
+.nav-btn:hover{
+    background:white;
 }
 
 footer{
@@ -266,211 +79,38 @@ footer{
     padding:20px;
 }
 
-section{
-    width:90%;
-    max-width:1200px;
-    margin:50px auto;
-}
-
-section h2{
-    color:#FFD700;
-    font-size:36px;
-    margin-bottom:25px;
-}
-
-section p{
-    font-size:18px;
-    line-height:1.9;
-    color:#f5f5f5;
-    margin-bottom:20px;
-}
-
-.card{
-    background:#13365d;
-    padding:30px;
-    border-radius:15px;
-    margin-top:30px;
-    border:1px solid rgba(255,255,255,.1);
-    box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-.card h2{
-    color:#FFD700;
-    margin-bottom:20px;
-}
-
-.card ul{
-    margin-left:25px;
-}
-
-.card li{
-    margin-bottom:15px;
-    font-size:18px;
-    line-height:1.7;
-}
-
-body{
-    background:#081b29;
-    color:white;
-    margin:0;
-    padding:0;
-}
-
-section{
-    padding-top:30px;
-}
-
-
-.announcement-bar{
-    display:flex;
-    align-items:center;
-    background:#1c0640;
-    border-top:2px solid #061385;
-    border-bottom:2px solid #061385;
-    overflow:hidden;
-}
-
-.announcement-title{
-    background:#063777;
-    color:#ffffff;
-    padding:14px 22px;
-    font-size:18px;
-    font-weight:bold;
-    z-index:2;
-}
-
-.announcement-wrapper{
-    flex:1;
-    overflow:hidden;
-    white-space:nowrap;
-}
-
-.announcement-text{
-    display:inline-block;
-    padding-left:100%;
-    animation:scrollText 60s linear infinite;
-    color:#fff;
-    font-size:17px;
-    font-weight:600;
-}
-
-@keyframes scrollText{
-
-    from{
-        transform:translateX(0);
-    }
-
-    to{
-        transform:translateX(-100%);
-    }
-
-}
-
 </style>
 
 </head>
 <body>
+ <h1>About Us</h1>
 
-<header class="navbar">
-
-<div class="nav-logo">
+<header>
 
 <img src="ZETA_LOGO.png" alt="ZETA Logo">
 
-<div class="logo-text">
+<h1>ZETA ORGANIZATION</h1>
 
-<h2>ZETA ASSOCIATION</h2>
+<p>
+Zone for Electronics Technologies and Automation
+</p>
 
-<p>Zone for Electronics Technologies and Automation</p>
-
-</div>
-
-</div>
-
-<nav class="desktop-menu">
-
-<a href="index.html">Home</a>
-
-<a href="ABOUT.HTML" class="active">About</a>
-
-<a href="VISION & MISSION.HTML">Vision & Mission</a>
-
-<a href="team.html">Team</a>
-
-<a href="EVENT.HTML">Event</a>
-
-<a href="Registered.HTML">Registered Members</a>
-
-<a href="GALLERY.HTML">Gallery</a>
-
-<a href="Resources.html">Resources</a>
-
-<a href="CONTACT.HTML">Contact</a>
-
-</nav>
-
-<div class="menu-toggle" onclick="toggleMenu()">
-    ☰
-</div>
-
-<div id="mobileMenu" class="mobile-menu">
-
-<a href="index.html">Home</a>
-
-<a href="ABOUT.HTML">About</a>
-
-<a href="VISION & MISSION.HTML">Vision & Mission</a>
-
-<a href="team.html">Team</a>
-
-<a href="EVENT.HTML">Event</a>
-
-<a href="REGISTERED.HTML">Registered Members</a>
-
-<a href="GALLERY.HTML">Gallery</a>
-
-<a href="Resources.html">Resources</a>
-
-<a href="CONTACT.HTML">Contact</a>
-
-</div>
 </header>
-
-<div class="announcement-bar">
-
-    <div class="announcement-title">
-        📢 Announcements :
-    </div>
-
-    <div class="announcement-wrapper">
-
-        <div class="announcement-text">
-
-            🎉 PCB Design Workshop Registration is Open |
-            📅 Workshop Date : 03 August 2026 |
-            🏆 Welcome to ZETA Association |
-            📢 Stay updated with the latest events and workshops.
-
-        </div>
-
-    </div>
-
-</div>
 
 <section>
 
-<h2>About ZETA Association</h2>
+<h2>About ZETA</h2>
 
 <p>
-ZETA Association (Zone for Electronics Technologies and Automation)
+ZETA Organization (Zone for Electronics Technologies and Automation)
 is a student-driven technical organization established under the
 Department of Electronics and Communication Engineering at
 BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY.
 </p>
 
 <p>
-The association encourages innovation, technical excellence,
-leadership, teamwork, industrial exposure, and project development
+The organization aims to encourage innovation, technical excellence,
+leadership, teamwork, project development and industrial exposure
 among engineering students.
 </p>
 
@@ -479,15 +119,10 @@ among engineering students.
 <h2>Objectives</h2>
 
 <ul>
-
 <li>Promote technical innovation.</li>
-
 <li>Conduct workshops and seminars.</li>
-
 <li>Encourage project development.</li>
-
 <li>Develop leadership qualities.</li>
-
 <li>Create industry-ready engineers.</li>
 
 </ul>
@@ -499,40 +134,21 @@ among engineering students.
 <h2>Why ZETA?</h2>
 
 <p>
-ZETA provides students with opportunities to improve technical
-knowledge, communication skills, leadership qualities,
-industrial exposure, project development, and professional networking.
+ZETA provides a platform for students to improve technical knowledge,
+communication skills, project management and professional networking.
 </p>
 
 </div>
-
+<a href="index.html" class="nav-btn">← Back to Home</a>
 </section>
-<script>
-function toggleMenu(){
-
-document.getElementById("mobileMenu").classList.toggle("active");
-
-}
-</script>
-
 
 <footer>
 
-<p><strong>ZETA ASSOCIATION</strong></p>
-
-<p>
-Zone for Electronics Technologies and Automation
-</p>
+<p>© 2026 ZETA ORGANIZATION</p>
 
 <p>
 BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY
 </p>
-
-<p>
-Department of Electronics and Communication Engineering
-</p>
-
-<p>© 2025 ZETA ASSOCIATION</p>
 
 </footer>
 

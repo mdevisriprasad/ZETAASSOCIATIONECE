@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<title>ZETA ASSOCIATION</title>
+<title>ZETA ORGANIZATION</title>
 
  <link rel="icon" type="image/png" href="ZETA_LOGO.png">
 
@@ -17,7 +15,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Segoe UI,sans-serif;
+    font-family:Segoe UI, sans-serif;
 }
 
 body{
@@ -25,22 +23,14 @@ body{
     color:white;
 }
 
-/* Header */
-.header{
-    background:#17365f;
-    width:100%;
-    padding:15px 40px;
-    box-sizing:border-box;
-}
-
-.header-container{
+header{
+    background:#001f3f;
+    padding:15px 5%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    
 }
 
-/* Logo */
 .logo{
     display:flex;
     align-items:center;
@@ -48,48 +38,12 @@ body{
 }
 
 .logo img{
-    width:60px !important;
-    height:60px !important;
-    border-radius:50%;
+    width:60px;
+    height:60px;
 }
 
-.logo-text h1{
-    color:#ffd400;
-    margin:0;
-    font-size:20px;
-    font-weight:700;
-    text-transform:uppercase;
-}
-
-.logo-text p{
-    color:#fff;
-    margin-top:4px;
-    font-size:14px;
-}
-
-/* Navigation */
-.navbar ul{
-    display:flex;
-    list-style:none;
-    gap:15px;
-    margin:50;
-    padding:0;
-}
-
-.navbar ul li a{
-    color:#fff;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:15px;
-}
-
-.navbar ul li a:hover,
-.navbar ul li a.active{
-    color:#ffd400;
-}
-
-.menu-toggle{
-    display:none;
+.logo h2{
+    color:#FFD700;
 }
 
 .hero{
@@ -214,267 +168,24 @@ footer{
 
 }
 
-/* Hamburger */
-
-.menu-btn{
-
-    display:none;
-
-    font-size:28px;
-
-    color:white;
-
-    cursor:pointer;
-
-    margin-left:25px;
-
-}
-
-/* Mobile Menu */
-
-/* ================= MOBILE MENU ================= */
-
-.menu-toggle{
-    display:none;
-    font-size:32px;
-    color:#FFD700;
-    cursor:pointer;
-}
-
-#mobileMenu{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:90px;
-    left:0;
-    width:100%;
-    background:#0b2b52;
-    box-shadow:0 10px 20px rgba(0,0,0,.4);
-    z-index:9999;
-}
-
-#mobileMenu.active{
-    display:flex;
-}
-
-#mobileMenu a{
-    color:#fff;
-    text-decoration:none;
-    padding:16px 20px;
-    border-bottom:1px solid rgba(255,255,255,.15);
-    font-size:17px;
-    font-weight:600;
-    transition:.3s;
-}
-
-#mobileMenu a:hover{
-    background:#FFD700;
-    color:#081b29;
-}
-/* Mobile */
-
-@media screen and (max-width:768px){
-
-.header{
-    padding:12px 15px;
-    justify-content:space-between;
-}
-
-.logo-section{
-    gap:10px;
-}
-
-.logo-section img{
-    width:45px;
-    height:45px;
-}
-
-.logo-text h1{
-    font-size:18px;
-}
-
-.logo-text p{
-    font-size:11px;
-}
-
-nav{
-    display:none;
-}
-
-.menu-toggle{
-    display:block;
-}
-
-section{
-    width:95%;
-    margin:30px auto;
-}
-
-section h2{
-    font-size:28px;
-}
-
-section p{
-    font-size:16px;
-}
-
-.card{
-    padding:18px;
-}
-
-}
-
-.logo-section{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.logo-section img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-}
-
-.logo-title h2{
-    color:#FFD700;
-}
-
-.logo-title p{
-    font-size:12px;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:20px;
-}
-
-.announcement-bar{
-    display:flex;
-    align-items:center;
-    background:#1c0640;
-    border-top:2px solid #061385;
-    border-bottom:2px solid #061385;
-    overflow:hidden;
-}
-
-.announcement-title{
-    background:#063777;
-    color:#ffffff;
-    padding:14px 22px;
-    font-size:18px;
-    font-weight:bold;
-    z-index:2;
-}
-
-.announcement-wrapper{
-    flex:1;
-    overflow:hidden;
-    white-space:nowrap;
-}
-
-.announcement-text{
-    display:inline-block;
-    padding-left:100%;
-    animation:scrollText 60s linear infinite;
-    color:#fff;
-    font-size:17px;
-    font-weight:600;
-}
-
-@keyframes scrollText{
-
-    from{
-        transform:translateX(0);
-    }
-
-    to{
-        transform:translateX(-100%);
-    }
-
-}
-
 </style>
 
 </head>
 <body>
 
-<header class="header">
-    <div class="header-container">
+<header>
 
-        <div class="logo">
-            <img src="ZETA_LOGO.png" alt="ZETA Logo">
-            <div class="logo-text">
-                <h1>ZETA ASSOCIATION</h1>
-                <p>Zone for Electronics Technologies and Automation</p>
-            </div>
-        </div>
+<div class="logo">
+<img src="ZETA_LOGO.png" alt="ZETA Logo">
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ABOUT.HTML">About</a></li>
-                <li><a href="VISION & MISSION.HTML">Vision & Mission</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="EVENT.HTML">Event</a></li>
-                <li><a href="registered.html">Registered Members</a></li>
-                <li><a href="GALLERY.HTML">Gallery</a></li>
-                <li><a href="Resources.html">Resources</a></li>
-                <li><a href="CONTACT.HTML">Contact</a></li>
-            </ul>
-        </nav>
-
-    </div>
-
-<div class="menu-toggle" onclick="toggleMenu()">
-    ☰
+<div>
+<h2>ZETA ORGANIZATION</h2>
+<p>Zone for Electronics Technologies and Automation</p>
 </div>
-
-<div id="mobileMenu" class="mobile-menu">
-
-<a href="index.html">Home</a>
-
-<a href="ABOUT.HTML">About</a>
-
-<a href="VISION & MISSION.HTML">Vision & Mission</a>
-
-<a href="team.html">Team</a>
-
-<a href="EVENT.HTML">Event</a>
-
-<a href="registered.html">Registered Members</a>
-
-<a href="GALLERY.HTML">Gallery</a>
-
-<a href="Resources.html">Resources</a>
-
-<a href="CONTACT.HTML">Contact</a>
 
 </div>
 
 </header>
-
-<div class="announcement-bar">
-
-    <div class="announcement-title">
-        📢 Announcements :
-    </div>
-
-    <div class="announcement-wrapper">
-
-        <div class="announcement-text">
-
-            🎉 PCB Design Workshop Registration is Open |
-            📅 Workshop Date : 03 August 2026 |
-            🏆 Welcome to ZETA Association |
-            📢 Stay updated with the latest events and workshops.
-
-        </div>
-
-    </div>
-
-</div>
 
 <section class="hero">
 
@@ -491,33 +202,16 @@ innovation challenges and professional development programs.
 
 <div class="card">
 
-<h2>PCB Design Workshop</h2>
+<h2>Embedded Systems Workshop</h2>
 
-<p><b>Date:</b> 03-August-2026</p>
-
-<p>
-Learn PCB Designing using EasyEDA,
-and industry practices.
-</p>
-
-<a href="PCB_registration.html" class="btn">
-Register Now
-</a>
-
-</div>
-
-<div class="card">
-
-<h2>Technical Quiz Competition</h2>
-
-<p><b>Date:</b> Announced Soon</p>
+<p><b>Date:</b> 15 July 2026</p>
 
 <p>
-Test your knowledge in Electronics,
-Communication and Automation.
+Hands-on workshop on Arduino,
+Microcontrollers and Embedded Systems.
 </p>
 
-<a href="quiz_registration.html" class="btn">
+<a href="#register" class="btn">
 Register Now
 </a>
 
@@ -527,14 +221,14 @@ Register Now
 
 <h2>IoT Innovation Challenge</h2>
 
-<p><b>Date:</b> Announced Soon</p>
+<p><b>Date:</b> 25 July 2026</p>
 
 <p>
 Build innovative Internet of Things projects
 and compete with fellow students.
 </p>
 
-<a href="IoT_Innovation_registration.html" class="btn">
+<a href="#register" class="btn">
 Register Now
 </a>
 
@@ -542,32 +236,33 @@ Register Now
 
 <div class="card">
 
-<h2>Embedded Systems Workshop</h2>
+<h2>PCB Design Workshop</h2>
 
-<p><b>Date:</b> Announced Soon</p>
+<p><b>Date:</b> 10 August 2026</p>
 
 <p>
-Learn about embedded systems, 
-microcontrollers, and real-time programming.
+Learn PCB Designing using Sprint Layout,
+KiCad and industry practices.
 </p>
 
-<a href="Embedded_registration.html" class="btn">
+<a href="#register" class="btn">
 Register Now
 </a>
+
 </div>
 
 <div class="card">
 
-<h2>Robotics and Automation Workshop</h2>
+<h2>Technical Quiz Competition</h2>
 
-<p><b>Date:</b> Announced Soon</p>
+<p><b>Date:</b> 20 August 2026</p>
 
 <p>
-Learn about robotics and automation, 
-control systems, and industrial applications.
+Test your knowledge in Electronics,
+Communication and Automation.
 </p>
 
-<a href="Robotics_registration.html" class="btn">
+<a href="#register" class="btn">
 Register Now
 </a>
 
@@ -575,17 +270,65 @@ Register Now
 
 </section>
 
-<script>
-function toggleMenu(){
+<section class="registration" id="register">
 
-document.getElementById("mobileMenu").classList.toggle("active");
+<h2>Event Registration</h2>
 
-}
-</script>
+<form>
+
+<input type="text"
+placeholder="Full Name"
+required>
+
+<input type="text"
+placeholder="Roll Number"
+required>
+
+<input type="email"
+placeholder="Email Address">
+
+<select required>
+
+<option>
+Select Event
+</option>
+
+<option>
+Embedded Systems Workshop
+</option>
+
+<option>
+IoT Innovation Challenge
+</option>
+
+<option>
+PCB Design Workshop
+</option>
+
+<option>
+Technical Quiz Competition
+</option>
+
+</select>
+
+<textarea
+rows="5"
+placeholder="Additional Information">
+</textarea>
+
+<button type="submit">
+Submit Registration
+</button>
+<a href="index.html" class="nav-btn">
+← Back to Home
+</a>
+</form>
+
+</section>
 
 <footer>
 
-<p><strong>ZETA ASSOCIATION</strong></p>
+<h3>ZETA ORGANIZATION</h3>
 
 <p>
 Zone for Electronics Technologies and Automation
@@ -596,10 +339,8 @@ BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY
 </p>
 
 <p>
-Department of Electronics and Communication Engineering
+Department of Electronics & Communication Engineering
 </p>
-
-<p>© 2025 ZETA ASSOCIATION</p>
 
 </footer>
 

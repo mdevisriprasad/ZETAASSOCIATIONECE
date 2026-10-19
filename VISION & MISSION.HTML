@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<title>ZETA ASSOCIATION</title>
+<title>ZETA ORGANIZATION</title>
 
  <link rel="icon" type="image/png" href="ZETA_LOGO.png">
 
@@ -25,61 +23,33 @@ body{
     color:white;
 }
 
-/* HEADER */
-
-.header{
-
-    width:100%;
-    background:#08264b;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 40px;
+header{
+    background:#001f3f;
+    padding:15px;
+    text-align:center;
 }
 
-.logo{
-
-    display:flex;
-    align-items:center;
+header img{
+    width:80px;
 }
 
-.logo img{
-
-    width:60px;
-    height:60px;
-    margin-right:15px;
-}
-
-.logo-text h2{
-
+header h1{
     color:#FFD700;
-    font-size:22px;
-    margin-bottom:5px;
+    margin-top:10px;
 }
 
-.logo-text p{
-
-    color:#fff;
-    font-size:14px;
+section{
+    padding:60px 10%;
 }
 
-nav{
-
-    display:flex;
-    gap:28px;
-}
-
-nav a{
-
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-nav a:hover{
-
+h2{
     color:#FFD700;
+    margin-bottom:20px;
+}
+
+p{
+    line-height:1.8;
+    margin-bottom:20px;
 }
 
 .card{
@@ -89,340 +59,31 @@ nav a:hover{
     margin-top:20px;
 }
 
-.card ul{
-    width:fit-content;
-    margin:20px auto;
-    text-align:left;
-    padding-left:25px;
-}
-
-.card ul li{
-    margin:12px 0;
-    font-size:20px;
-    color:white;
-}
-body{
-    background:#081b29;
-    color:white;
-    margin:0;
-    padding:0;
-}
-
-.navbar{
-width:100%;
-height:75px;
-background:#001f3f;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:0 45px;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.nav-logo{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.nav-logo img{
-width:55px;
-height:55px;
-}
-
-.nav-logo h2{
-color:#FFD700;
-font-size:20px;
-margin:0;
-}
-
-.nav-logo p{
-color:white;
-font-size:12px;
-margin-top:3px;
-}
-
-.desktop-menu{
-display:flex;
-gap:18px;
-}
-
-.desktop-menu a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-transition:.3s;
-}
-
-.desktop-menu a:hover{
-color:#FFD700;
-}
-
-.menu-toggle{
-    display:none;
-}
-
-/* Hamburger */
-
-.menu-btn{
-
-    display:none;
-
-    font-size:28px;
-
-    color:white;
-
-    cursor:pointer;
-
+ul{
     margin-left:25px;
-
+    line-height:2;
 }
 
-/* Mobile Menu */
-
-/* ================= MOBILE MENU ================= */
-
-.menu-toggle{
-    display:none;
-    font-size:32px;
-    color:#FFD700;
-    cursor:pointer;
-}
-
-#mobileMenu{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:90px;
-    left:0;
-    width:100%;
-    background:#0b2b52;
-    box-shadow:0 10px 20px rgba(0,0,0,.4);
-    z-index:9999;
-}
-
-#mobileMenu.active{
-    display:flex;
-}
-
-#mobileMenu a{
-    color:#fff;
-    text-decoration:none;
-    padding:16px 20px;
-    border-bottom:1px solid rgba(255,255,255,.15);
-    font-size:17px;
-    font-weight:600;
-    transition:.3s;
-}
-
-#mobileMenu a:hover{
+.nav-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
     background:#FFD700;
-    color:#081b29;
-}
-/* Mobile */
-
-@media screen and (max-width:768px){
-
-.header{
-    padding:12px 15px;
-    justify-content:space-between;
+    color:#001f3f;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:25px;
+    transition:0.3s;
 }
 
-.logo-section{
-    gap:10px;
+.nav-btn:hover{
+    background:white;
 }
 
-.logo-section img{
-    width:45px;
-    height:45px;
-}
-
-.logo-text h1{
-    font-size:18px;
-}
-
-.logo-text p{
-    font-size:11px;
-}
-
-nav{
-    display:none;
-}
-
-.menu-toggle{
-    display:block;
-}
-
-section{
-    width:95%;
-    margin:30px auto;
-}
-
-section h2{
-    font-size:28px;
-}
-
-section p{
-    font-size:16px;
-}
-
-.card{
-    padding:18px;
-}
-
-}
-
-@media(max-width:900px){
-
-.desktop-menu{
-display:none;
-}
-
-.menu-btn{
-display:block;
-}
-
-.navbar{
-padding:15px;
-}
-
-.nav-logo img{
-width:45px;
-height:45px;
-}
-
-.nav-logo h2{
-font-size:20px;
-}
-
-}
 footer{
     background:#001f3f;
     text-align:center;
     padding:20px;
-}
-
-@media(max-width:900px){
-
-.header{
-
-    flex-direction:column;
-    padding:15px;
-}
-
-nav{
-
-    margin-top:15px;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
-
-.logo{
-
-    justify-content:center;
-}
-}
-
-.card{
-    background:#13365d;
-    padding:30px;
-    border-radius:15px;
-    margin-top:30px;
-    border:1px solid rgba(255,255,255,.1);
-    box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-.card h2{
-    color:#FFD700;
-    margin-bottom:20px;
-}
-
-.card ul{
-    margin-left:25px;
-}
-
-.card li{
-    margin-bottom:15px;
-    font-size:18px;
-    line-height:1.7;
-}
-
-body{
-    background:#081b29;
-    color:white;
-    margin:0;
-    padding:0;
-}
-
-section{
-    padding-top:30px;
-}
-
-section{
-    width:90%;
-    max-width:1200px;
-    margin:50px auto;
-}
-
-section h2{
-    color:#FFD700;
-    font-size:36px;
-    margin-bottom:25px;
-}
-
-section p{
-    font-size:18px;
-    line-height:1.9;
-    color:#f5f5f5;
-    margin-bottom:20px;
-}
-
-.announcement-bar{
-    display:flex;
-    align-items:center;
-    background:#1c0640;
-    border-top:2px solid #061385;
-    border-bottom:2px solid #061385;
-    overflow:hidden;
-}
-
-.announcement-title{
-    background:#063777;
-    color:#ffffff;
-    padding:14px 22px;
-    font-size:18px;
-    font-weight:bold;
-    z-index:2;
-}
-
-.announcement-wrapper{
-    flex:1;
-    overflow:hidden;
-    white-space:nowrap;
-}
-
-.announcement-text{
-    display:inline-block;
-    padding-left:100%;
-    animation:scrollText 60s linear infinite;
-    color:#fff;
-    font-size:17px;
-    font-weight:600;
-}
-
-@keyframes scrollText{
-
-    from{
-        transform:translateX(0);
-    }
-
-    to{
-        transform:translateX(-100%);
-    }
-
 }
 
 </style>
@@ -430,92 +91,17 @@ section p{
 </head>
 <body>
 
-<header class="header">
+<header>
 
-    <div class="logo">
+<img src="ZETA_LOGO.png" alt="ZETA Logo">
 
-        <img src="ZETA_LOGO.png" alt="ZETA Logo">
+<h1>ZETA ORGANIZATION</h1>
 
-        <div class="logo-text">
-
-            <h2>ZETA ASSOCIATION</h2>
-
-            <p>Zone for Electronics Technologies and Automation</p>
-
-        </div>
-
-    </div>
-
-<nav class="desktop-menu">
-
-<a href="index.html">Home</a>
-
-<a href="about.html">About</a>
-
-<a href="vision & mission.html">Vision & Mission</a>
-
-<a href="team.html">Team</a>
-
-<a href="EVENT.HTML">Event</a>
-
-<a href="registered.html">Registered Members</a>
-
-<a href="gallery.html">Gallery</a>
-
-<a href="Resources.html">Resources</a>
-
-<a href="contact.html">Contact</a>
-
-</nav>
-
-<div class="menu-toggle" onclick="toggleMenu()">
-    ☰
-</div>
-
-<div id="mobileMenu">
-
-<a href="index.html">Home</a>
-
-<a href="about.html">About</a>
-
-<a href="VISION & MISSION.HTML">Vision & Mission</a>
-
-<a href="team.html">Team</a>
-
-<a href="EVENT.HTML">Event</a>
-
-<a href="registered.html">Registered Members</a>
-
-<a href="GALLERY.HTML">Gallery</a>
-
-<a href="Resources.html">Resources</a>
-
-<a href="contact.html">Contact</a>
-
-</div>
+<p>
+Zone for Electronics Technologies and Automation
+</p>
 
 </header>
-
-<div class="announcement-bar">
-
-    <div class="announcement-title">
-        📢 Announcements :
-    </div>
-
-    <div class="announcement-wrapper">
-
-        <div class="announcement-text">
-
-            🎉 PCB Design Workshop Registration is Open |
-            📅 Workshop Date : 03 August 2026 |
-            🏆 Welcome to ZETA Association |
-            📢 Stay updated with the latest events and workshops.
-
-        </div>
-
-    </div>
-
-</div>
 
 <section>
 
@@ -578,35 +164,18 @@ leadership, and lifelong learning.
 
 </div>
 
+<a href="index.html" class="nav-btn">← Back to Home</a>
+
+
 </section>
-
-<script>
-
-function toggleMenu(){
-
-document.getElementById("mobileMenu").classList.toggle("active");
-
-}
-
-</script>
 
 <footer>
 
-<p><strong>ZETA ASSOCIATION</strong></p>
-
-<p>
-Zone for Electronics Technologies and Automation
-</p>
+<p>© 2026 ZETA ORGANIZATION</p>
 
 <p>
 BEHARA COLLEGE OF ENGINEERING AND TECHNOLOGY
 </p>
-
-<p>
-Department of Electronics and Communication Engineering
-</p>
-
-<p>© 2025 ZETA ASSOCIATION</p>
 
 </footer>
 
